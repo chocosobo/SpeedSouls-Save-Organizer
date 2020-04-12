@@ -20,7 +20,7 @@ public class SuccessfulDeleteMessage extends AbstractMessage
 
 	private static final long serialVersionUID = 3917031603377354547L;
 
-	private static final String MESSAGE = "¼º°øÀûÀ¸·Î Á¦°ÅµÊ";
+	private static final String MESSAGE = "ì„±ê³µì ìœ¼ë¡œ ì œê±°ë¨";
 	private static final IconCode ICON = FontAwesome.CHECK;
 	private static final Color COLOR = new Color(232, 65, 24);
 

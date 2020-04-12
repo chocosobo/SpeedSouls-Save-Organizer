@@ -44,18 +44,14 @@ public class AboutPanel extends JPanel
 		layout.setAutoCreateGaps(true);
 		layout.setAutoCreateContainerGaps(true);
 
-		JLabel versionLabel = new JLabel("¹öÀü:");
+		JLabel versionLabel = new JLabel("ë²„ì „:");
 		versionLabel.setFont(getFont().deriveFont(Font.BOLD));
 		JLabel versionNumberLabel = new JLabel(OrganizerManager.VERSION);
 
-		JLabel developerLabel = new JLabel("°³¹ßÀÚ:");
+		JLabel developerLabel = new JLabel("ê°œë°œì:");
 		developerLabel.setFont(getFont().deriveFont(Font.BOLD));
 		JLabel developerLink = createDevLink();
 		JLabel githubLink = createGitHubLink();
-
-		JLabel developerLabel = new JLabel("¹ø¿ªÇÑ ³ğ:");
-		developerLabel.setFont(getFont().deriveFont(Font.BOLD));
-		JLabel developerLabel = new JLabel("ÃÊÄÚ¼Òº¸");
 
 		// Horizontal
 		GroupLayout.SequentialGroup hGroup = layout.createSequentialGroup();
@@ -103,7 +99,7 @@ public class AboutPanel extends JPanel
 
 	private JLabel createGitHubLink()
 	{
-		JLabel githubLabel = new JLabel("<html><body><a href=\"\">GitHub Repository</a></body></html>");
+		JLabel githubLabel = new JLabel("<html><body><a href=\"\">ë²ˆì—­í•œ ë†ˆ ê¹ƒí—™ : ì´ˆì½”ì†Œë³´</a></body></html>");
 		githubLabel.setIcon(IconFontSwing.buildIcon(Elusive.GITHUB, 20));
 		githubLabel.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
 		githubLabel.setHorizontalAlignment(SwingConstants.RIGHT);

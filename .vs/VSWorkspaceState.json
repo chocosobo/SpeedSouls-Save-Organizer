@@ -1,13 +1,11 @@
 {
   "ExpandedNodes": [
     "",
+    "\\src",
     "\\src\\com",
     "\\src\\com\\speedsouls",
     "\\src\\com\\speedsouls\\organizer",
-    "\\src\\com\\speedsouls\\organizer\\savelist",
-    "\\src\\com\\speedsouls\\organizer\\settings",
-    "\\src\\com\\speedsouls\\organizer\\update"
+    "\\src\\com\\speedsouls\\organizer\\data"
   ],
-  "SelectedNode": "\\README.md",
   "PreviewInSolutionExplorer": false
 }

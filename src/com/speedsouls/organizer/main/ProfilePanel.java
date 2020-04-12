@@ -39,8 +39,8 @@ public class ProfilePanel extends JPanel
 		layout.setAutoCreateGaps(true);
 		layout.setAutoCreateContainerGaps(true);
 
-		JLabel gamesLabel = new JLabel("°ÔÀÓ:");
-		JLabel profilesLabel = new JLabel("ÇÁ·ÎÆÄÀÏ:");
+		JLabel gamesLabel = new JLabel("ê²Œìž„:");
+		JLabel profilesLabel = new JLabel("í”„ë¡œíŒŒì¼:");
 
 		ProfilesComboBox profilesComboBox = createProfilesComboBox();
 		GamesComboBox gamesComboBox = createGameComboBox(profilesComboBox);
@@ -105,7 +105,7 @@ public class ProfilePanel extends JPanel
 	 */
 	private JButton createEditProfilesButton()
 	{
-		JButton editButton = new JButton("ÇÁ·ÎÆÄÀÏ ¼öÁ¤");
+		JButton editButton = new JButton("í”„ë¡œíŒŒì¼ ìˆ˜ì •");
 		editButton.addActionListener(event -> {
 			new ProfileConfigurationWindow();
 		});

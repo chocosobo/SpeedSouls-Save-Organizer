@@ -92,7 +92,7 @@ public class SaveListContextMenu extends JPopupMenu
 	 */
 	private JMenuItem createAddItem(SaveList saveList)
 	{
-		JMenuItem itemAdd = new JMenuItem("Æú´õ Ãß°¡");
+		JMenuItem itemAdd = new JMenuItem("í´ë” ì¶”ê°€");
 		itemAdd.setIcon(IconFontSwing.buildIcon(Elusive.PLUS_SIGN, 15, new Color(39, 174, 96)));
 		itemAdd.addActionListener(event -> {
 			saveList.askToCreateFolder();
@@ -108,7 +108,7 @@ public class SaveListContextMenu extends JPopupMenu
 	 */
 	private JMenuItem createRemoveItem(SaveList saveList)
 	{
-		JMenuItem itemRemove = new JMenuItem("Á¦°Å");
+		JMenuItem itemRemove = new JMenuItem("ì œê±°");
 		itemRemove.setIcon(IconFontSwing.buildIcon(Iconic.CHECK, 18, new Color(231, 76, 60)));
 		itemRemove.setAccelerator(KeyStroke.getKeyStroke("DELETE"));
 		itemRemove.addActionListener(event -> {
@@ -125,7 +125,7 @@ public class SaveListContextMenu extends JPopupMenu
 	 */
 	private JMenuItem createEditItem(SaveList saveList)
 	{
-		JMenuItem itemEdit = new JMenuItem("ÀÌ¸§ ¹Ù²Ù±â");
+		JMenuItem itemEdit = new JMenuItem("ì´ë¦„ ë°”ê¾¸ê¸°");
 		itemEdit.setIcon(IconFontSwing.buildIcon(Elusive.EDIT, 15, new Color(243, 156, 18)));
 		itemEdit.setAccelerator(KeyStroke.getKeyStroke("F2"));
 		itemEdit.addActionListener(event -> {
@@ -142,7 +142,7 @@ public class SaveListContextMenu extends JPopupMenu
 	 */
 	private JCheckBoxMenuItem createReadOnlyItem(SaveList saveList)
 	{
-		JCheckBoxMenuItem itemReadOnly = new JCheckBoxMenuItem("ÀĞ±â Àü¿ë");
+		JCheckBoxMenuItem itemReadOnly = new JCheckBoxMenuItem("ì½ê¸° ì „ìš©");
 		itemReadOnly.addActionListener(event -> {
 			saveList.getSelectedValue().getFile().setWritable(!itemReadOnly.isSelected());
 			if (OrganizerManager.getSelectedSortingCategory() == SortingCategory.READ_ONLY)
@@ -155,7 +155,7 @@ public class SaveListContextMenu extends JPopupMenu
 
 	private JMenuItem createRefreshItem(SaveList saveList)
 	{
-		JMenuItem itemRefresh = new JMenuItem("»õ·Î °íÄ§");
+		JMenuItem itemRefresh = new JMenuItem("ìƒˆë¡œ ê³ ì¹¨");
 		itemRefresh.setIcon(IconFontSwing.buildIcon(Elusive.REPEAT, 15, new Color(138, 43, 226)));
 		itemRefresh.addActionListener(event -> {
 			saveList.refresh();
@@ -169,7 +169,7 @@ public class SaveListContextMenu extends JPopupMenu
 	 */
 	private JMenuItem createOpenInExplorerItem(SaveList saveList)
 	{
-		JMenuItem itemOpenInExplorer = new JMenuItem("ÆÄÀÏ Å½»ö±â¿¡¼­ Æú´õ ¿­±â");
+		JMenuItem itemOpenInExplorer = new JMenuItem("íŒŒì¼ íƒìƒ‰ê¸°ì—ì„œ í´ë” ì—´ê¸°");
 		itemOpenInExplorer.setIcon(IconFontSwing.buildIcon(Entypo.EXPORT, 15, new Color(30, 144, 255)));
 		itemOpenInExplorer.addActionListener(event -> {
 			SaveListEntry entry = saveList.getSelectedValue();
@@ -187,7 +187,7 @@ public class SaveListContextMenu extends JPopupMenu
 			}
 			catch (Exception e)
 			{
-				JOptionPane.showMessageDialog(null, "ÆÄÀÏ Å½»ö±â¸¦ ¿©´Â Áß ¿¡·¯°¡ ¹ß»ıÇß½À´Ï´Ù!", "¿¡·¯ ¹ß»ı", JOptionPane.ERROR_MESSAGE);
+				JOptionPane.showMessageDialog(null, "íŒŒì¼ íƒìƒ‰ê¸°ë¥¼ ì—¬ëŠ” ì¤‘ ì—ëŸ¬ê°€ ë°œìƒí–ˆìŠµë‹ˆë‹¤!", "ì—ëŸ¬ ë°œìƒ", JOptionPane.ERROR_MESSAGE);
 			}
 		});
 		return itemOpenInExplorer;

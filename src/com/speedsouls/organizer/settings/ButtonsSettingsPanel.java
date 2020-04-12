@@ -68,7 +68,7 @@ public class ButtonsSettingsPanel extends JPanel
 	 */
 	private JButton createSaveButton(SettingsWindow window)
 	{
-		JButton saveButton = new JButton("ÀúÀå");
+		JButton saveButton = new JButton("ì €ìž¥");
 		saveButton.addActionListener(event -> {
 			window.saveSettings();
 			window.dispatchEvent(new WindowEvent(window, WindowEvent.WINDOW_CLOSING));
@@ -85,7 +85,7 @@ public class ButtonsSettingsPanel extends JPanel
 	 */
 	private JButton createCancelButton(SettingsWindow window)
 	{
-		JButton cancelButton = new JButton("Ãë¼Ò");
+		JButton cancelButton = new JButton("ì·¨ì†Œ");
 		cancelButton.addActionListener(event -> window.dispatchEvent(new WindowEvent(window, WindowEvent.WINDOW_CLOSING)));
 		return cancelButton;
 	}

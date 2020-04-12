@@ -45,7 +45,7 @@ public class RootFolder extends Folder
 		catch (IOException e)
 		{
 			JOptionPane.showMessageDialog(null,
-					"ÀÌ¸§À» ¹Ù²Ù´Âµ¥ ½ÇÆÐÇß½À´Ï´Ù. ´Ù¸¥ ÇÁ·Î±×·¥¿¡ ÀÇÇØ ÀÐÈ÷°í ÀÖÀ» ¼ö ÀÖ½À´Ï´Ù.", "ÁÖÀÇ",
+					"ì´ë¦„ì„ ë°”ê¾¸ëŠ”ë° ì‹¤íŒ¨í–ˆìŠµë‹ˆë‹¤. ë‹¤ë¥¸ í”„ë¡œê·¸ëž¨ì— ì˜í•´ ì½ížˆê³  ìžˆì„ ìˆ˜ ìžˆìŠµë‹ˆë‹¤.", "ì£¼ì˜",
 					JOptionPane.WARNING_MESSAGE);
 			return false;
 		}

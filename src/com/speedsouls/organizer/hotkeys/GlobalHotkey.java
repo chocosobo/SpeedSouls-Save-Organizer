@@ -16,7 +16,7 @@ import com.speedsouls.organizer.savelist.Save;
 public enum GlobalHotkey
 {
 
-	LOAD_SAVE("¼±ÅÃÇÑ ¼¼ÀÌºê ºÒ·¯¿À±â:", "ÁöÁ¤µÇÁö ¾ÊÀ½")
+	LOAD_SAVE("ì„ íƒí•œ ì„¸ì´ë¸Œ ë¶ˆëŸ¬ì˜¤ê¸°:", "ì§€ì •ë˜ì§€ ì•ŠìŒ")
 	{
 
 		@Override
@@ -33,7 +33,7 @@ public enum GlobalHotkey
 			return OrganizerManager.PREFS_KEY_GLOBAL_HOTKEY_LOAD;
 		}
 	},
-	READ_ONLY_TOGGLE("ÆÄÀÏÀ» ÀĞ±â Àü¿ëÀ¸·Î ¼öÁ¤:", "ÁöÁ¤µÇÁö ¾ÊÀ½")
+	READ_ONLY_TOGGLE("íŒŒì¼ì„ ì½ê¸° ì „ìš©ìœ¼ë¡œ ìˆ˜ì •:", "ì§€ì •ë˜ì§€ ì•ŠìŒ")
 	{
 
 		@Override
@@ -49,7 +49,7 @@ public enum GlobalHotkey
 			return OrganizerManager.PREFS_KEY_GLOBAL_HOTKEY_READ_ONLY;
 		}
 	},
-	GLOBAL_HOTKEY_TOGGLE("±Û·Î¹ú ´ÜÃà±â Åä±Û:", "ÁöÁ¤µÇÁö ¾ÊÀ½")
+	GLOBAL_HOTKEY_TOGGLE("ê¸€ë¡œë²Œ ë‹¨ì¶•ê¸° í† ê¸€:", "ì§€ì •ë˜ì§€ ì•ŠìŒ")
 	{
 
 		@Override

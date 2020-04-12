@@ -42,7 +42,7 @@ public class OrganizerWindow extends JFrame
 
 	public OrganizerWindow()
 	{
-		super("½ºÇÇµå ¼Ò¿ï - ¼¼ÀÌºê Á¤¸®±â");
+		super("ìŠ¤í”¼ë“œ ì†Œìš¸ - ì„¸ì´ë¸Œ ì •ë¦¬ê¸°");
 
 		initProperties();
 		initLayout();
@@ -66,7 +66,7 @@ public class OrganizerWindow extends JFrame
 		}
 		catch (Exception e)
 		{
-			JOptionPane.showMessageDialog(this, e.getMessage(), "¿¡·¯ ¹ß»ı", JOptionPane.ERROR_MESSAGE);
+			JOptionPane.showMessageDialog(this, e.getMessage(), "ì—ëŸ¬ ë°œìƒ", JOptionPane.ERROR_MESSAGE);
 		}
 		setIconImage(OrganizerManager.speedsoulsIcon);
 		setResizable(IS_RESIZABLE);

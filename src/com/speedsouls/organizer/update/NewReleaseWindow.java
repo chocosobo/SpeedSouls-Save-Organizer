@@ -35,7 +35,7 @@ public class NewReleaseWindow extends JDialog
 	 */
 	public NewReleaseWindow()
 	{
-		super(null, "»õ ¹öÀüÀÌ »ç¿ë °¡´ÉÇÕ´Ï´Ù!", Dialog.ModalityType.APPLICATION_MODAL);
+		super(null, "ìƒˆ ë²„ì „ì´ ì‚¬ìš© ê°€ëŠ¥í•©ë‹ˆë‹¤!", Dialog.ModalityType.APPLICATION_MODAL);
 
 		initLayout();
 		initProperties();
@@ -85,7 +85,7 @@ public class NewReleaseWindow extends JDialog
 
 	private JButton createNewDownloadButton()
 	{
-		JButton downloadButton = new JButton("´Ù¿î·Îµå");
+		JButton downloadButton = new JButton("ë‹¤ìš´ë¡œë“œ");
 		downloadButton.addActionListener(e -> {
 			OrganizerManager.openLatestReleasePage();
 			setVisible(false);

@@ -65,8 +65,8 @@ public class OrganizerManager
 	/**
 	 * Constants defining various URLs.
 	 */
-	public static final String WEB_PAGE_URL = "github.com/chocosobo/SpeedSouls-Save-Organizer";
-	public static final String GITHUB_REPO_URL = "github.com/chocosobo/SpeedSouls-Save-Organizer";
+	public static final String WEB_PAGE_URL = "www.github.com/chocosobo/SpeedSouls-Save-Organizer";
+	public static final String GITHUB_REPO_URL = "www.github.com/chocosobo/SpeedSouls-Save-Organizer";
 	public static final String TWITTER_URL = "www.twitter.com/Kahmul78";
 	public static final String LATEST_RELEASE_JSON_URL = "https://api.github.com/repos/chocosobo/SpeedSouls-Save-Organizer/releases/latest";
 	public static final String LATEST_RELEASE_URL = "https://github.com/chocosobo/SpeedSouls-Save-Organizer/releases/";
@@ -134,8 +134,8 @@ public class OrganizerManager
 		}
 		catch (IOException e)
 		{
-			JOptionPane.showMessageDialog(null, "½ÇÇà Áß µ¥ÀÌÅÍ¸¦ ÀĞ¾îµéÀÌÁö ¸ø Çß½À´Ï´Ù. Á¤¸®±â¸¦ ½ÃÀÛÇÏÁö ¸ø Çß½À´Ï´Ù.",
-					"¿¡·¯ ¹ß»ı", JOptionPane.ERROR_MESSAGE);
+			JOptionPane.showMessageDialog(null, "ì‹¤í–‰ ì¤‘ ë°ì´í„°ë¥¼ ì½ì–´ë“¤ì´ì§€ ëª» í–ˆìŠµë‹ˆë‹¤. ì •ë¦¬ê¸°ë¥¼ ì‹œì‘í•˜ì§€ ëª» í–ˆìŠµë‹ˆë‹¤.",
+					"ì—ëŸ¬ ë°œìƒ", JOptionPane.ERROR_MESSAGE);
 			System.exit(1);
 		}
 	}
@@ -225,8 +225,8 @@ public class OrganizerManager
 		}
 		catch (NativeHookException e)
 		{
-			JOptionPane.showMessageDialog(mainWindow, "Å°º¸µå ÈÄÅ© Áß ¹®Á¦°¡ »ı°å½À´Ï´Ù. ±Û·Î¹ú ´ÜÃàÅ°°¡ ºñÈ°¼ºÈ­ µÇ¾ú½À´Ï´Ù.",
-					"¿¡·¯ ¹ß»ı", JOptionPane.ERROR_MESSAGE);
+			JOptionPane.showMessageDialog(mainWindow, "í‚¤ë³´ë“œ í›„í¬ ì¤‘ ë¬¸ì œê°€ ìƒê²¼ìŠµë‹ˆë‹¤. ê¸€ë¡œë²Œ ë‹¨ì¶•í‚¤ê°€ ë¹„í™œì„±í™” ë˜ì—ˆìŠµë‹ˆë‹¤.",
+					"ì—ëŸ¬ ë°œìƒ", JOptionPane.ERROR_MESSAGE);
 			keyboardHook.setHotkeysEnabled(false);
 		}
 	}
@@ -459,7 +459,7 @@ public class OrganizerManager
 			}
 			catch (Exception e)
 			{
-				JOptionPane.showMessageDialog(mainWindow, "ÇÁ·ÎÆÄÀÏÀ» ºÒ·¯¿À´Âµ¥ ½ÇÆĞÇß½À´Ï´Ù!", "¿¡·¯ ¹ß»ı",
+				JOptionPane.showMessageDialog(mainWindow, "í”„ë¡œíŒŒì¼ì„ ë¶ˆëŸ¬ì˜¤ëŠ”ë° ì‹¤íŒ¨í–ˆìŠµë‹ˆë‹¤!", "ì—ëŸ¬ ë°œìƒ",
 						JOptionPane.ERROR_MESSAGE);
 			}
 		}
@@ -524,7 +524,7 @@ public class OrganizerManager
 		File dir = new File(parent.getFile().getPath() + File.separator + name);
 		if (dir.exists())
 		{
-			JOptionPane.showMessageDialog(mainWindow, "ÀÌ Æú´õ´Â ÀÌ¹Ì Á¸ÀçÇÕ´Ï´Ù!", "¿¡·¯ ¹ß»ı", JOptionPane.ERROR_MESSAGE);
+			JOptionPane.showMessageDialog(mainWindow, "ì´ í´ë”ëŠ” ì´ë¯¸ ì¡´ì¬í•©ë‹ˆë‹¤!", "ì—ëŸ¬ ë°œìƒ", JOptionPane.ERROR_MESSAGE);
 			return;
 		}
 		dir.mkdirs();
@@ -545,7 +545,7 @@ public class OrganizerManager
 		if (getSelectedGame().getSaveFileLocation() == null)
 		{
 			JOptionPane.showMessageDialog(mainWindow,
-					"¼¼ÀÌºê ÆÄÀÏÀ» ºÒ·¯¿À·Á¸é ÇÁ·ÎÆÄÀÏ¿¡ À§Ä¡¸¦ ¼³Á¤ÇØ¾ßÇÕ´Ï´Ù!", "¿¡·¯ ¹ß»ı",
+					"ì„¸ì´ë¸Œ íŒŒì¼ì„ ë¶ˆëŸ¬ì˜¤ë ¤ë©´ í”„ë¡œíŒŒì¼ì— ìœ„ì¹˜ë¥¼ ì„¤ì •í•´ì•¼í•©ë‹ˆë‹¤!", "ì—ëŸ¬ ë°œìƒ",
 					JOptionPane.WARNING_MESSAGE);
 			return null;
 		}
@@ -560,7 +560,7 @@ public class OrganizerManager
 		}
 		catch (IOException e)
 		{
-			JOptionPane.showMessageDialog(mainWindow, "¼¼ÀÌºê ÆÄÀÏÀ» ºÒ·¯¿À´ø Áß ¿¡·¯°¡ ¹ß»ıÇß½À´Ï´Ù!", "¿¡·¯ ¹ß»ı",
+			JOptionPane.showMessageDialog(mainWindow, "ì„¸ì´ë¸Œ íŒŒì¼ì„ ë¶ˆëŸ¬ì˜¤ë˜ ì¤‘ ì—ëŸ¬ê°€ ë°œìƒí–ˆìŠµë‹ˆë‹¤!", "ì—ëŸ¬ ë°œìƒ",
 					JOptionPane.ERROR_MESSAGE);
 		}
 		return newFile;
@@ -590,7 +590,7 @@ public class OrganizerManager
 		}
 		catch (Exception e)
 		{
-			JOptionPane.showMessageDialog(mainWindow, "¼¼ÀÌºê ÆÄÀÏÀ» ºÒ·¯¿À´ø Áß ¿¡·¯°¡ ¹ß»ıÇß½À´Ï´Ù!", "¿¡·¯ ¹ß»ı",
+			JOptionPane.showMessageDialog(mainWindow, "ì„¸ì´ë¸Œ íŒŒì¼ì„ ë¶ˆëŸ¬ì˜¤ë˜ ì¤‘ ì—ëŸ¬ê°€ ë°œìƒí–ˆìŠµë‹ˆë‹¤!", "ì—ëŸ¬ ë°œìƒ",
 					JOptionPane.ERROR_MESSAGE);
 		}
 		gameFile.setWritable(canWriteSaveFile);
@@ -610,7 +610,7 @@ public class OrganizerManager
 		}
 		catch (Exception e)
 		{
-			JOptionPane.showMessageDialog(mainWindow, e.getMessage(), "¿¡·¯ ¹ß»ı", JOptionPane.ERROR_MESSAGE);
+			JOptionPane.showMessageDialog(mainWindow, e.getMessage(), "ì—ëŸ¬ ë°œìƒ", JOptionPane.ERROR_MESSAGE);
 		}
 	}
 
@@ -626,7 +626,7 @@ public class OrganizerManager
 		}
 		catch (Exception e)
 		{
-			JOptionPane.showMessageDialog(mainWindow, e.getMessage(), "¿¡·¯ ¹ß»ı", JOptionPane.ERROR_MESSAGE);
+			JOptionPane.showMessageDialog(mainWindow, e.getMessage(), "ì—ëŸ¬ ë°œìƒ", JOptionPane.ERROR_MESSAGE);
 		}
 	}
 

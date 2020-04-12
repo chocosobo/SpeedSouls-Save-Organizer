@@ -20,7 +20,7 @@ public class SuccessfulRefreshMessage extends AbstractMessage
 
 	private static final long serialVersionUID = -2151979076153299908L;
 
-	private static final String MESSAGE = "¼º°øÀûÀ¸·Î »õ·Î°íÄ§ µÊ";
+	private static final String MESSAGE = "ì„±ê³µì ìœ¼ë¡œ ìƒˆë¡œê³ ì¹¨ ë¨";
 	private static final IconCode ICON = Elusive.REPEAT;
 	private static final Color COLOR = new Color(138, 43, 226);
 

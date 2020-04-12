@@ -97,7 +97,7 @@ public class Folder extends SaveListEntry
 		catch (IOException e)
 		{
 			JOptionPane.showMessageDialog(null,
-					"ÀÌ¸§À» ¹Ù²Ù´Âµ¥ ½ÇÆĞÇß½À´Ï´Ù. ´Ù¸¥ ÇÁ·Î±×·¥¿¡ ÀÇÇØ ÀĞÈ÷°í ÀÖÀ» ¼ö ÀÖ½À´Ï´Ù.", "ÁÖÀÇ",
+					"ì´ë¦„ì„ ë°”ê¾¸ëŠ”ë° ì‹¤íŒ¨í–ˆìŠµë‹ˆë‹¤. ë‹¤ë¥¸ í”„ë¡œê·¸ë¨ì— ì˜í•´ ì½íˆê³  ìˆì„ ìˆ˜ ìˆìŠµë‹ˆë‹¤.", "ì£¼ì˜",
 					JOptionPane.WARNING_MESSAGE);
 			return false;
 		}
@@ -147,7 +147,7 @@ public class Folder extends SaveListEntry
 		{
 			color = Color.RED;
 			label.setForeground(Color.RED);
-			label.setToolTipText("À§Ä¡°¡ ´õÀÌ»ó Á¸ÀçÇÏÁö ¾Ê½À´Ï´Ù!");
+			label.setToolTipText("ìœ„ì¹˜ê°€ ë”ì´ìƒ ì¡´ì¬í•˜ì§€ ì•ŠìŠµë‹ˆë‹¤!");
 		}
 		if (isClosed())
 			label.setIcon(IconFontSwing.buildIcon(FontAwesome.FOLDER, ICON_SIZE, color));

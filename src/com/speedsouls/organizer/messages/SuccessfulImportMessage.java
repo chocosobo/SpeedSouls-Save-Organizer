@@ -20,7 +20,7 @@ public class SuccessfulImportMessage extends AbstractMessage
 
 	private static final long serialVersionUID = 3917031603377354547L;
 
-	private static final String MESSAGE = "¼º°øÀûÀ¸·Î ÀúÀåµÊ";
+	private static final String MESSAGE = "ì„±ê³µì ìœ¼ë¡œ ì €ì¥ë¨";
 	private static final IconCode ICON = Iconic.CURVED_ARROW;
 	private static final Color COLOR = new Color(30, 144, 255);
 

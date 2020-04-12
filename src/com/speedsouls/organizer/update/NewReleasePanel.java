@@ -34,9 +34,9 @@ public class NewReleasePanel extends JPanel
 		layout.setAutoCreateGaps(true);
 		layout.setAutoCreateContainerGaps(true);
 
-		JLabel newReleaseLabel = new JLabel("ªı πˆ¿¸:");
+		JLabel newReleaseLabel = new JLabel("ÏÉà Î≤ÑÏ†Ñ:");
 		JLabel versionLabel = new JLabel(OrganizerManager.getLatestReleaseVersion());
-		JLabel changelogLabel = new JLabel("∫Ø∞Ê¡°:");
+		JLabel changelogLabel = new JLabel("Î≥ÄÍ≤ΩÏ†ê:");
 
 		String description = OrganizerManager.getLatestReleaseDescription().replaceAll("\\R", "<br>");
 

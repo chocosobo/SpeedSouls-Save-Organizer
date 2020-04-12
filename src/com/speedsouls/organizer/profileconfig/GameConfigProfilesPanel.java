@@ -39,7 +39,7 @@ public class GameConfigProfilesPanel extends JPanel
 		layout.setAutoCreateGaps(true);
 		layout.setAutoCreateContainerGaps(true);
 
-		JLabel profileLabel = new JLabel("ÇÁ·ÎÆÄÀÏ: ");
+		JLabel profileLabel = new JLabel("í”„ë¡œíŒŒì¼: ");
 
 		ProfileList profileList = createProfileList(game);
 		JScrollPane listPane = new JScrollPane(profileList, JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED,
@@ -112,8 +112,8 @@ public class GameConfigProfilesPanel extends JPanel
 	 */
 	private JButton createNewButton(ProfileList profileList)
 	{
-		JButton newButton = new JButton("»õ·Î ¸¸µé±â");
-		newButton.setToolTipText("»õ ÇÁ·ÎÆÄÀÏÀ» ¸¸µì´Ï´Ù");
+		JButton newButton = new JButton("ìƒˆë¡œ ë§Œë“¤ê¸°");
+		newButton.setToolTipText("ìƒˆ í”„ë¡œíŒŒì¼ì„ ë§Œë“­ë‹ˆë‹¤");
 		newButton.addActionListener(event -> {
 			profileList.askToCreateProfile();
 		});
@@ -129,8 +129,8 @@ public class GameConfigProfilesPanel extends JPanel
 	 */
 	private JButton createEditButton(ProfileList profileList)
 	{
-		JButton editButton = new JButton("¼öÁ¤");
-		editButton.setToolTipText("¼±ÅÃÇÑ ÇÁ·ÎÆÄÀÏÀ» ¼öÁ¤ÇÕ´Ï´Ù");
+		JButton editButton = new JButton("ìˆ˜ì •");
+		editButton.setToolTipText("ì„ íƒí•œ í”„ë¡œíŒŒì¼ì„ ìˆ˜ì •í•©ë‹ˆë‹¤");
 		editButton.addActionListener(event -> {
 			profileList.askToEditProfile(profileList.getSelectedValue());
 		});
@@ -144,8 +144,8 @@ public class GameConfigProfilesPanel extends JPanel
 	 */
 	private JButton createImportButton(ProfileList profileList)
 	{
-		JButton importButton = new JButton("ºÒ·¯¿À±â");
-		importButton.setToolTipText("ÇÁ·ÎÆÄÀÏÀ» ºÒ·¯¿É´Ï´Ù");
+		JButton importButton = new JButton("ë¶ˆëŸ¬ì˜¤ê¸°");
+		importButton.setToolTipText("í”„ë¡œíŒŒì¼ì„ ë¶ˆëŸ¬ì˜µë‹ˆë‹¤");
 		importButton.addActionListener(event -> {
 			profileList.askToImportProfiles();
 		});
@@ -161,8 +161,8 @@ public class GameConfigProfilesPanel extends JPanel
 	 */
 	private JButton createDeleteButton(ProfileList profileList)
 	{
-		JButton deleteButton = new JButton("Á¦°Å");
-		deleteButton.setToolTipText("¼±ÅÃÇÑ ÇÁ·ÎÆÄÀÏÀ» Á¦°ÅÇÕ´Ï´Ù");
+		JButton deleteButton = new JButton("ì œê±°");
+		deleteButton.setToolTipText("ì„ íƒí•œ í”„ë¡œíŒŒì¼ì„ ì œê±°í•©ë‹ˆë‹¤");
 		deleteButton.addActionListener(event -> {
 			profileList.askToDeleteProfiles(profileList.getSelectedValuesList());
 		});

@@ -69,7 +69,7 @@ public class HotkeysSettingsPanel extends JPanel
 		layout.setVerticalGroup(vGroup);
 
 		setLayout(layout);
-		setBorder(BorderFactory.createTitledBorder(BorderFactory.createEtchedBorder(EtchedBorder.LOWERED), "¥‹√‡≈∞"));
+		setBorder(BorderFactory.createTitledBorder(BorderFactory.createEtchedBorder(EtchedBorder.LOWERED), "Îã®Ï∂ïÌÇ§"));
 	}
 
 

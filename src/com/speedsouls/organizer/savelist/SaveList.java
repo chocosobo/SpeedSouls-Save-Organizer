@@ -141,7 +141,7 @@ public class SaveList extends JList<SaveListEntry> implements ListCellRenderer<S
 		}
 		catch (Exception e)
 		{
-			JOptionPane.showMessageDialog(getParent(), "ÆÄÀÏ ½Ã½ºÅÛÀ» »õ·Î°íÄ§ÇÏ´Â Áß ¿¡·¯°¡ ¹ß»ıÇß½À´Ï´Ù.", "¿¡·¯ ¹ß»ı",
+			JOptionPane.showMessageDialog(getParent(), "íŒŒì¼ ì‹œìŠ¤í…œì„ ìƒˆë¡œê³ ì¹¨í•˜ëŠ” ì¤‘ ì—ëŸ¬ê°€ ë°œìƒí–ˆìŠµë‹ˆë‹¤.", "ì—ëŸ¬ ë°œìƒ",
 					JOptionPane.ERROR_MESSAGE);
 			return;
 		}
@@ -185,7 +185,7 @@ public class SaveList extends JList<SaveListEntry> implements ListCellRenderer<S
 		{
 			boolean areHotkeysEnabled = OrganizerManager.getKeyboardHook().areHotkeysEnabled();
 			OrganizerManager.getKeyboardHook().setHotkeysEnabled(false);
-			JOptionPane.showMessageDialog(getParent(), "¾Æ¹«·± ÄÁÅÙÃ÷°¡ ¾ø´Â Æú´õ´Â ¿­ ¼ö ¾ø½À´Ï´Ù!", "¾È³»", JOptionPane.INFORMATION_MESSAGE);
+			JOptionPane.showMessageDialog(getParent(), "ì•„ë¬´ëŸ° ì»¨í…ì¸ ê°€ ì—†ëŠ” í´ë”ëŠ” ì—´ ìˆ˜ ì—†ìŠµë‹ˆë‹¤!", "ì•ˆë‚´", JOptionPane.INFORMATION_MESSAGE);
 			OrganizerManager.getKeyboardHook().setHotkeysEnabled(areHotkeysEnabled);
 			return;
 		}
@@ -228,7 +228,7 @@ public class SaveList extends JList<SaveListEntry> implements ListCellRenderer<S
 	{
 		boolean areHotkeysEnabled = OrganizerManager.getKeyboardHook().areHotkeysEnabled();
 		OrganizerManager.getKeyboardHook().setHotkeysEnabled(false);
-		String name = JOptionPane.showInputDialog(getParent(), "Æú´õ ÀÌ¸§: ", "Æú´õ »ı¼º", JOptionPane.QUESTION_MESSAGE);
+		String name = JOptionPane.showInputDialog(getParent(), "í´ë” ì´ë¦„: ", "í´ë” ìƒì„±", JOptionPane.QUESTION_MESSAGE);
 		boolean nameValidation = validateNameForNewFolder(name);
 		OrganizerManager.getKeyboardHook().setHotkeysEnabled(areHotkeysEnabled);
 		if (nameValidation)
@@ -239,7 +239,7 @@ public class SaveList extends JList<SaveListEntry> implements ListCellRenderer<S
 			}
 			catch (Exception e)
 			{
-				JOptionPane.showMessageDialog(getParent(), "Æú´õ¸¦ »ı¼ºÇÏ´ø Áß ¿¡·¯°¡ ¹ß»ıÇß½À´Ï´Ù!", "¿¡·¯ ¹ß»ı",
+				JOptionPane.showMessageDialog(getParent(), "í´ë”ë¥¼ ìƒì„±í•˜ë˜ ì¤‘ ì—ëŸ¬ê°€ ë°œìƒí–ˆìŠµë‹ˆë‹¤!", "ì—ëŸ¬ ë°œìƒ",
 						JOptionPane.ERROR_MESSAGE);
 			}
 		}
@@ -261,8 +261,8 @@ public class SaveList extends JList<SaveListEntry> implements ListCellRenderer<S
 			return false;
 		if (OrganizerManager.containsIllegals(name))
 		{
-			JOptionPane.showMessageDialog(getParent(), "»ç¿ëÇÒ ¼ö ¾ø´Â ¹®ÀÚ¿­ (" + OrganizerManager.ILLEGAL_CHARACTERS + ") Àº(´Â) Çã¿ëµÇÁö ¾Ê½À´Ï´Ù!",
-					"°æ°í", JOptionPane.WARNING_MESSAGE);
+			JOptionPane.showMessageDialog(getParent(), "ì‚¬ìš©í•  ìˆ˜ ì—†ëŠ” ë¬¸ìì—´ (" + OrganizerManager.ILLEGAL_CHARACTERS + ") ì€(ëŠ”) í—ˆìš©ë˜ì§€ ì•ŠìŠµë‹ˆë‹¤!",
+					"ê²½ê³ ", JOptionPane.WARNING_MESSAGE);
 			return false;
 		}
 		SaveListEntry parent = getSelectedValue();
@@ -273,7 +273,7 @@ public class SaveList extends JList<SaveListEntry> implements ListCellRenderer<S
 		File newSaveDir = new File(parent.getFile() + File.separator + name);
 		if (newSaveDir.exists())
 		{
-			JOptionPane.showMessageDialog(getParent(), "ÀÌ Æú´õ´Â ÀÌ¹Ì Á¸ÀçÇÕ´Ï´Ù!", "ÁÖÀÇ", JOptionPane.WARNING_MESSAGE);
+			JOptionPane.showMessageDialog(getParent(), "ì´ í´ë”ëŠ” ì´ë¯¸ ì¡´ì¬í•©ë‹ˆë‹¤!", "ì£¼ì˜", JOptionPane.WARNING_MESSAGE);
 			return false;
 		}
 		return true;
@@ -294,20 +294,20 @@ public class SaveList extends JList<SaveListEntry> implements ListCellRenderer<S
 		OrganizerManager.getKeyboardHook().setHotkeysEnabled(false);
 		if (entries.size() == 1)
 			confirm = JOptionPane.showConfirmDialog(getParent(),
-					"Á¤¸»·Î '" + entries.get(0).getName() + "' Æú´õ¿Í"
-							+ (entries.get(0) instanceof Folder ? " ³»¿ë¹°À» ÀüºÎ Á¦°ÅÇÕ´Ï±î?" : "?"),
-					"Á¦°Å " + entries.get(0).getName(), JOptionPane.YES_NO_OPTION);
+					"ì •ë§ë¡œ '" + entries.get(0).getName() + "' í´ë”ì™€"
+							+ (entries.get(0) instanceof Folder ? " ë‚´ìš©ë¬¼ì„ ì „ë¶€ ì œê±°í•©ë‹ˆê¹Œ?" : "?"),
+					"ì œê±° " + entries.get(0).getName(), JOptionPane.YES_NO_OPTION);
 		else if (entries.size() > 1)
 			confirm = JOptionPane.showConfirmDialog(getParent(),
-					"Á¤¸»·Î ¼±ÅÃÇÑ ¸ğµç Æú´õ¿Í ³»¿ë¹°À» ³²±è¾øÀÌ Á¦°ÅÇÕ´Ï±î?", "Á¦°Å",
+					"ì •ë§ë¡œ ì„ íƒí•œ ëª¨ë“  í´ë”ì™€ ë‚´ìš©ë¬¼ì„ ë‚¨ê¹€ì—†ì´ ì œê±°í•©ë‹ˆê¹Œ?", "ì œê±°",
 					JOptionPane.YES_NO_OPTION);
 		for (SaveListEntry saveListEntry : entries)
 		{
 			// if the parent file cannot be written to, then deletion cannot happen
 			if (!saveListEntry.getFile().getParentFile().canWrite())
 			{
-				JOptionPane.showMessageDialog(getParent(), "ÆÄÀÏÀ» Áö¿ï ¼ö ¾ø½À´Ï´Ù.´Ù¸¥ ÇÁ·Î±×·¥¿¡ ÀÇÇØ ÀĞÈ÷°í ÀÖÀ» ¼ö ÀÖ½À´Ï´Ù.",
-						"°æ°í", JOptionPane.WARNING_MESSAGE);
+				JOptionPane.showMessageDialog(getParent(), "íŒŒì¼ì„ ì§€ìš¸ ìˆ˜ ì—†ìŠµë‹ˆë‹¤.ë‹¤ë¥¸ í”„ë¡œê·¸ë¨ì— ì˜í•´ ì½íˆê³  ìˆì„ ìˆ˜ ìˆìŠµë‹ˆë‹¤.",
+						"ê²½ê³ ", JOptionPane.WARNING_MESSAGE);
 				return;
 			}
 		}
@@ -346,14 +346,14 @@ public class SaveList extends JList<SaveListEntry> implements ListCellRenderer<S
 			return;
 		boolean areHotkeysEnabled = OrganizerManager.getKeyboardHook().areHotkeysEnabled();
 		OrganizerManager.getKeyboardHook().setHotkeysEnabled(false);
-		String newName = (String) JOptionPane.showInputDialog(getParent(), (entry instanceof Folder ? "Æú´õ ÀÌ¸§: " : "ÀÌ¸§ ÀúÀå: "),
-				"¼öÁ¤ " + entry.getName(), JOptionPane.QUESTION_MESSAGE, null, null, entry.getName());
+		String newName = (String) JOptionPane.showInputDialog(getParent(), (entry instanceof Folder ? "í´ë” ì´ë¦„: " : "ì´ë¦„ ì €ì¥: "),
+				"ìˆ˜ì • " + entry.getName(), JOptionPane.QUESTION_MESSAGE, null, null, entry.getName());
 		boolean nameValidation = validateNewName(entry, newName);
 		OrganizerManager.getKeyboardHook().setHotkeysEnabled(areHotkeysEnabled);
 		if (!entry.canBeRenamed())
 		{
 			JOptionPane.showMessageDialog(getParent(),
-					"ÇöÀç ÀÌ ¿£Æ®¸®´Â ÀÌ¸§À» ¹Ù²Ü ¼ö ¾ø½À´Ï´Ù. ´Ù¸¥ ÇÁ·Î±×·¥¿¡ ÀÇÇØ ÀĞÈ÷°í ÀÖÀ» ¼ö ÀÖ½À´Ï´Ù.", "°æ°í",
+					"í˜„ì¬ ì´ ì—”íŠ¸ë¦¬ëŠ” ì´ë¦„ì„ ë°”ê¿€ ìˆ˜ ì—†ìŠµë‹ˆë‹¤. ë‹¤ë¥¸ í”„ë¡œê·¸ë¨ì— ì˜í•´ ì½íˆê³  ìˆì„ ìˆ˜ ìˆìŠµë‹ˆë‹¤.", "ê²½ê³ ",
 					JOptionPane.WARNING_MESSAGE);
 			return;
 		}
@@ -391,15 +391,15 @@ public class SaveList extends JList<SaveListEntry> implements ListCellRenderer<S
 			return false;
 		if (OrganizerManager.containsIllegals(newName))
 		{
-			JOptionPane.showMessageDialog(getParent(), "»ç¿ëÇÒ ¼ö ¾ø´Â ¹®ÀÚ¿­ (" + OrganizerManager.ILLEGAL_CHARACTERS + ") Àº(´Â) Çã¿ëµÇÁö ¾Ê½À´Ï´Ù!",
-					"°æ°í", JOptionPane.WARNING_MESSAGE);
+			JOptionPane.showMessageDialog(getParent(), "ì‚¬ìš©í•  ìˆ˜ ì—†ëŠ” ë¬¸ìì—´ (" + OrganizerManager.ILLEGAL_CHARACTERS + ") ì€(ëŠ”) í—ˆìš©ë˜ì§€ ì•ŠìŠµë‹ˆë‹¤!",
+					"ê²½ê³ ", JOptionPane.WARNING_MESSAGE);
 			return false;
 		}
 		// if the name exists and the renaming is not a re-capitalization then don't allow renaming
 		File newSaveDir = new File(entry.getFile().getParentFile() + File.separator + newName);
 		if (newSaveDir.exists() && !entry.getName().equalsIgnoreCase(newName))
 		{
-			JOptionPane.showMessageDialog(getParent(), "ÀÌ ÀÌ¸§Àº ÀÌ¹Ì Á¸ÀçÇÕ´Ï´Ù!", "ÁÖÀÇ", JOptionPane.WARNING_MESSAGE);
+			JOptionPane.showMessageDialog(getParent(), "ì´ ì´ë¦„ì€ ì´ë¯¸ ì¡´ì¬í•©ë‹ˆë‹¤!", "ì£¼ì˜", JOptionPane.WARNING_MESSAGE);
 			return false;
 		}
 		return true;

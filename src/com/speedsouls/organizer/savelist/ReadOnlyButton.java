@@ -97,9 +97,9 @@ public class ReadOnlyButton extends JLabel implements MouseListener, ProfileList
 	{
 		super.setEnabled(flag);
 		if (flag)
-			setToolTipText("ÀÌ ÆÄÀÏÀº ÇöÀç ÀĞ±â Àü¿ëÀÔ´Ï´Ù.");
+			setToolTipText("ì´ íŒŒì¼ì€ í˜„ì¬ ì½ê¸° ì „ìš©ì…ë‹ˆë‹¤.");
 		else
-			setToolTipText("ÀÌ ÆÄÀÏÀº ÇöÀç ÀĞ°í ¾µ ¼ö ÀÖ½À´Ï´Ù.");
+			setToolTipText("ì´ íŒŒì¼ì€ í˜„ì¬ ì½ê³  ì“¸ ìˆ˜ ìˆìŠµë‹ˆë‹¤.");
 	}
 
 

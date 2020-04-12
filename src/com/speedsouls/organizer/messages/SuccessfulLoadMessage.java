@@ -20,7 +20,7 @@ public class SuccessfulLoadMessage extends AbstractMessage
 
 	private static final long serialVersionUID = 7321956095930505656L;
 
-	private static final String MESSAGE = "¼º°øÀûÀ¸·Î ºÒ·¯¿È";
+	private static final String MESSAGE = "ì„±ê³µì ìœ¼ë¡œ ë¶ˆëŸ¬ì˜´";
 	private static final IconCode ICON = Elusive.REPEAT;
 	private static final Color COLOR = new Color(39, 174, 96);
 

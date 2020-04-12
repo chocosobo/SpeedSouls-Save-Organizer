@@ -32,7 +32,7 @@ public class AboutWindow extends JDialog
 	 */
 	public AboutWindow()
 	{
-		super(null, "½ºÇÇµå ¼Ò¿ï - ¼¼ÀÌºê Á¤¸®±â »ó¼¼", Dialog.ModalityType.APPLICATION_MODAL);
+		super(null, "ìŠ¤í”¼ë“œ ì†Œìš¸ - ì„¸ì´ë¸Œ ì •ë¦¬ê¸° ìƒì„¸", Dialog.ModalityType.APPLICATION_MODAL);
 
 		initLayout();
 		initProperties();

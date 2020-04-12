@@ -97,7 +97,7 @@ public class ButtonPanel extends JPanel
 	 */
 	private JButton createImportButton()
 	{
-		JButton importButton = new JButton("¼¼ÀÌºê ÆÄÀÏ ÀúÀå");
+		JButton importButton = new JButton("ì„¸ì´ë¸Œ íŒŒì¼ ì €ì¥");
 		importButton.setIcon(IconFontSwing.buildIcon(Iconic.CURVED_ARROW, 16, new Color(30, 144, 255)));
 		importButton.addActionListener(event -> {
 			Profile profile = OrganizerManager.getSelectedProfile();
@@ -107,8 +107,8 @@ public class ButtonPanel extends JPanel
 				return;
 			}
 			JOptionPane.showMessageDialog(null,
-					"ÀúÀåÇÏ±â Àü¿¡ ÇÁ·ÎÆÄÀÏÀ» »ı¼ºÇØÁÖ¼¼¿ä! ÇÁ·ÎÆÄÀÏ ¼³Á¤¿¡¼­ »ı¼ºÇÒ ¼ö ÀÖ½À´Ï´Ù.",
-					"ÁÖÀÇ", JOptionPane.WARNING_MESSAGE);
+					"ì €ì¥í•˜ê¸° ì „ì— í”„ë¡œíŒŒì¼ì„ ìƒì„±í•´ì£¼ì„¸ìš”! í”„ë¡œíŒŒì¼ ì„¤ì •ì—ì„œ ìƒì„±í•  ìˆ˜ ìˆìŠµë‹ˆë‹¤.",
+					"ì£¼ì˜", JOptionPane.WARNING_MESSAGE);
 		});
 		return importButton;
 	}
@@ -122,7 +122,7 @@ public class ButtonPanel extends JPanel
 	 */
 	private JButton createLoadButton()
 	{
-		JButton loadButton = new JButton("¼¼ÀÌºê ºÒ·¯¿À±â");
+		JButton loadButton = new JButton("ì„¸ì´ë¸Œ ë¶ˆëŸ¬ì˜¤ê¸°");
 		loadButton.setIcon(IconFontSwing.buildIcon(Elusive.REPEAT, 15, new Color(39, 174, 96)));
 		loadButton.addActionListener(event -> {
 			SaveListEntry entry = OrganizerManager.getSelectedEntry();
@@ -140,12 +140,12 @@ public class ButtonPanel extends JPanel
 	 */
 	private JButton createReplaceButton()
 	{
-		JButton replaceButton = new JButton("¼¼ÀÌºê µ¤¾î¾²±â");
+		JButton replaceButton = new JButton("ì„¸ì´ë¸Œ ë®ì–´ì“°ê¸°");
 		replaceButton.setIcon(IconFontSwing.buildIcon(Elusive.REFRESH, 15, new Color(255, 168, 0)));
 		replaceButton.addActionListener(event -> {
 			Save selectedSave = (Save) OrganizerManager.getSelectedEntry();
-			int confirm = JOptionPane.showConfirmDialog(getParent(), "Á¤¸»·Î ÀÌ ¼¼ÀÌºê¿¡ µ¤¾î¾µ±î¿ä?  '" + selectedSave.getName() + "'",
-					"µ¤¾î¾²±â " + selectedSave.getName(), JOptionPane.YES_NO_OPTION);
+			int confirm = JOptionPane.showConfirmDialog(getParent(), "ì •ë§ë¡œ ì´ ì„¸ì´ë¸Œì— ë®ì–´ì“¸ê¹Œìš”?  '" + selectedSave.getName() + "'",
+					"ë®ì–´ì“°ê¸° " + selectedSave.getName(), JOptionPane.YES_NO_OPTION);
 			if (confirm != 0)
 				return;
 			OrganizerManager.importAndReplaceSavefile(selectedSave);

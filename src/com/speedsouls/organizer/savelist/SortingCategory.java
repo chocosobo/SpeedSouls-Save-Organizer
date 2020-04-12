@@ -20,7 +20,7 @@ import java.nio.file.attribute.FileTime;
 public enum SortingCategory
 {
 
-	ALPHABET("°¡³ª´Ù¼ø")
+	ALPHABET("ê°€ë‚˜ë‹¤ìˆœ")
 	{
 
 		@Override
@@ -29,7 +29,7 @@ public enum SortingCategory
 			return s1.getFile().getName().compareToIgnoreCase(s2.getName());
 		}
 	},
-	DATE("ÃÖ½Å¼ø")
+	DATE("ìµœì‹ ìˆœ")
 	{
 
 		@Override
@@ -53,7 +53,7 @@ public enum SortingCategory
 			return 0;
 		}
 	},
-	READ_ONLY("ÀĞ±â Àü¿ë")
+	READ_ONLY("ì½ê¸° ì „ìš©")
 	{
 
 		@Override

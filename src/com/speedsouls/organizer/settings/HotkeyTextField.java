@@ -24,7 +24,7 @@ public class HotkeyTextField extends JTextField implements FocusListener, KeyLis
 
 	private static final long serialVersionUID = 154973469277989728L;
 
-	private static final String WAITING_FOR_INPUT_TEXT = "Å° ¼³Á¤Áß...";
+	private static final String WAITING_FOR_INPUT_TEXT = "í‚¤ ì„¤ì •ì¤‘...";
 
 	private String currentKey;
 	private GlobalHotkey hotkey;

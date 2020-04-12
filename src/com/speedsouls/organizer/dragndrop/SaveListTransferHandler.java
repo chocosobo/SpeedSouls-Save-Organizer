@@ -89,7 +89,7 @@ public class SaveListTransferHandler extends TransferHandler
 			if (newPath.toFile().exists())
 			{
 				if (JOptionPane.showConfirmDialog(saveList.getParent(),
-						entry.getName() + " ÀÌ¹Ì ÀÌ Æú´õ ¾È¿¡ Á¸ÀçÇÕ´Ï´Ù. µ¤¾î ¾º¿ì½Ã°Ú½À´Ï±î?", "ÁÖÀÇ",
+						entry.getName() + " ì´ë¯¸ ì´ í´ë” ì•ˆì— ì¡´ì¬í•©ë‹ˆë‹¤. ë®ì–´ ì”Œìš°ì‹œê² ìŠµë‹ˆê¹Œ?", "ì£¼ì˜",
 						JOptionPane.YES_NO_OPTION) != 0)
 					return false;
 				SaveListEntry existingEntry = newParentFolder.getChildByName(entry.getName());

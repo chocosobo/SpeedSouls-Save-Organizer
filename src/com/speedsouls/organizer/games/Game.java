@@ -19,11 +19,11 @@ import com.speedsouls.organizer.profileconfig.Profile;
 public enum Game
 {
 
-	DARK_SOULS("╢ые╘ ╪р©О", "DS1", "DRAKS0005.sl2"),
-	DARK_SOULS_REMASTERED("┬╙╪р ╦╝╦╤", "DSR", "DRAKS0005.sl2"),
-	DARK_SOULS_II("┬╙╪р II", "DS2", "DARKSII0000.sl2"),
-	DARK_SOULS_II_SOTFS("╫╨╡ц╤С", "DS2SOTFS", "DS2SOFS0000.sl2"),
-	DARK_SOULS_III("┬╙╪р III", "DS3", "DS30000.sl2");
+	DARK_SOULS("К▀╓М│╛ Л├▄Л ╦", "DS1", "DRAKS0005.sl2"),
+	DARK_SOULS_REMASTERED("К▀╪Л├▄ К╕╛К╖┬", "DSR", "DRAKS0005.sl2"),
+	DARK_SOULS_II("К▀╪Л├▄ II", "DS2", "DARKSII0000.sl2"),
+	DARK_SOULS_II_SOTFS("Л┼╓Й╪╢К²╪", "DS2SOTFS", "DS2SOFS0000.sl2"),
+	DARK_SOULS_III("К▀╪Л├▄ III", "DS3", "DS30000.sl2");
 
 	private String caption;
 	private String abbr;

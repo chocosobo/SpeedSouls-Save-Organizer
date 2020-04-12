@@ -20,7 +20,7 @@ public class SuccessfulReplaceMessage extends AbstractMessage
 
 	private static final long serialVersionUID = 3917031603377354547L;
 
-	private static final String MESSAGE = "¼º°øÀûÀ¸·Î µ¤¾î¾º¿öÁü";
+	private static final String MESSAGE = "ì„±ê³µì ìœ¼ë¡œ ë®ì–´ì”Œì›Œì§";
 	private static final IconCode ICON = Elusive.REFRESH;
 	private static final Color COLOR = new Color(255, 168, 0);
 

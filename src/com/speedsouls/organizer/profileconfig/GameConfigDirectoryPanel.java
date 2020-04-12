@@ -44,8 +44,8 @@ public class GameConfigDirectoryPanel extends JPanel
 		File saveFile = game.getSaveFileLocation();
 		File gameDir = game.getDirectory();
 
-		JLabel saveFileLabel = new JLabel("¼¼ÀÌºê ÆÄÀÏ À§Ä¡:");
-		JLabel directoryLabel = new JLabel("ÇÁ·ÎÆÄÀÏ À§Ä¡:");
+		JLabel saveFileLabel = new JLabel("ì„¸ì´ë¸Œ íŒŒì¼ ìœ„ì¹˜:");
+		JLabel directoryLabel = new JLabel("í”„ë¡œíŒŒì¼ ìœ„ì¹˜:");
 
 		JTextField saveFileField = new JTextField(saveFile != null ? saveFile.getPath() : "");
 		JTextField directoryField = new JTextField(gameDir != null ? gameDir.getPath() : "");
@@ -89,7 +89,7 @@ public class GameConfigDirectoryPanel extends JPanel
 	 */
 	private JButton createSaveFileBrowseButton(JTextField saveFileField, JTextField directoryField, Game game)
 	{
-		JButton browseButton = new JButton("Ã£±â");
+		JButton browseButton = new JButton("ì°¾ê¸°");
 
 		browseButton.addActionListener(event -> {
 			JFileChooser fc = new JFileChooser(saveFileField.getText());
@@ -100,7 +100,7 @@ public class GameConfigDirectoryPanel extends JPanel
 				File selectedSavefile = fc.getSelectedFile();
 				if (selectedSavefile == null || !selectedSavefile.exists())
 				{
-					JOptionPane.showMessageDialog(null, "ÀÌ ÆÄÀÏÀº Á¸ÀçÇÏÁö ¾Ê½À´Ï´Ù!", "¿¡·¯ ¹ß»ı", JOptionPane.ERROR_MESSAGE);
+					JOptionPane.showMessageDialog(null, "ì´ íŒŒì¼ì€ ì¡´ì¬í•˜ì§€ ì•ŠìŠµë‹ˆë‹¤!", "ì—ëŸ¬ ë°œìƒ", JOptionPane.ERROR_MESSAGE);
 					return;
 				}
 				if (selectedSavefile.getName().equalsIgnoreCase(game.getSaveName()))
@@ -108,9 +108,9 @@ public class GameConfigDirectoryPanel extends JPanel
 					game.setSaveFileLocation(selectedSavefile);
 					saveFileField.setText(selectedSavefile.getPath());
 					int confirm = JOptionPane.showConfirmDialog(getParent(),
-							"ÀÌ ¼¼ÀÌºê ÆÄÀÏ À§Ä¡¸¦ ÇÁ·ÎÆÄÀÏ ÀúÀå À§Ä¡·Î ÁöÁ¤ÇÕ´Ï±î??"
-									+ " ¿øÇÑ´Ù¸é ´Ù¸¥ Æú´õ¸¦ ÁöÁ¤ÇÒ ¼ö ÀÖ½À´Ï´Ù.",
-							"¼¼ÀÌºê ÆÄÀÏ ¼±ÅÃÁß", JOptionPane.YES_NO_OPTION);
+							"ì´ ì„¸ì´ë¸Œ íŒŒì¼ ìœ„ì¹˜ë¥¼ í”„ë¡œíŒŒì¼ ì €ì¥ ìœ„ì¹˜ë¡œ ì§€ì •í•©ë‹ˆê¹Œ??"
+									+ " ì›í•œë‹¤ë©´ ë‹¤ë¥¸ í´ë”ë¥¼ ì§€ì •í•  ìˆ˜ ìˆìŠµë‹ˆë‹¤.",
+							"ì„¸ì´ë¸Œ íŒŒì¼ ì„ íƒì¤‘", JOptionPane.YES_NO_OPTION);
 					if (confirm == 0)
 					{
 						directoryField.setText(selectedSavefile.getParentFile().getPath());
@@ -122,7 +122,7 @@ public class GameConfigDirectoryPanel extends JPanel
 					OrganizerManager.saveProperties(game);
 					return;
 				}
-				JOptionPane.showMessageDialog(null, "ÆÄÀÏ ¸íÀº ¹İµå½Ã '" + game.getSaveName() + "' ¿©¾ß ÇÕ´Ï´Ù!", "¿¡·¯ ¹ß»ı",
+				JOptionPane.showMessageDialog(null, "íŒŒì¼ ëª…ì€ ë°˜ë“œì‹œ '" + game.getSaveName() + "' ì—¬ì•¼ í•©ë‹ˆë‹¤!", "ì—ëŸ¬ ë°œìƒ",
 						JOptionPane.ERROR_MESSAGE);
 			}
 		});
@@ -139,12 +139,12 @@ public class GameConfigDirectoryPanel extends JPanel
 	 */
 	private JButton createDirectoryBrowseButton(JTextField directoryField, Game game)
 	{
-		JButton browseButton = new JButton("Ã£±â");
+		JButton browseButton = new JButton("ì°¾ê¸°");
 
 		browseButton.addActionListener(event -> {
 			if (game.getSaveFileLocation() == null)
 			{
-				JOptionPane.showMessageDialog(null, "¸ÕÀú ¼¼ÀÌºê ÆÄÀÏ À§Ä¡¸¦ ÁöÁ¤ÇØÁÖ¼¼¿ä!", "ÁÖÀÇ",
+				JOptionPane.showMessageDialog(null, "ë¨¼ì € ì„¸ì´ë¸Œ íŒŒì¼ ìœ„ì¹˜ë¥¼ ì§€ì •í•´ì£¼ì„¸ìš”!", "ì£¼ì˜",
 						JOptionPane.WARNING_MESSAGE);
 				return;
 			}
@@ -156,7 +156,7 @@ public class GameConfigDirectoryPanel extends JPanel
 				File selectedDir = fc.getSelectedFile();
 				if (selectedDir == null || !selectedDir.exists())
 				{
-					JOptionPane.showMessageDialog(null, "ÀÌ À§Ä¡´Â Á¸ÀçÇÏÁö ¾Ê½À´Ï´Ù!", "¿¡·¯ ¹ß»ı", JOptionPane.ERROR_MESSAGE);
+					JOptionPane.showMessageDialog(null, "ì´ ìœ„ì¹˜ëŠ” ì¡´ì¬í•˜ì§€ ì•ŠìŠµë‹ˆë‹¤!", "ì—ëŸ¬ ë°œìƒ", JOptionPane.ERROR_MESSAGE);
 					return;
 				}
 				directoryField.setText(selectedDir.getPath());

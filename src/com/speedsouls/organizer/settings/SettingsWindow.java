@@ -37,7 +37,7 @@ public class SettingsWindow extends JDialog
 	 */
 	public SettingsWindow()
 	{
-		super(null, "¼³Á¤", Dialog.ModalityType.APPLICATION_MODAL);
+		super(null, "ì„¤ì •", Dialog.ModalityType.APPLICATION_MODAL);
 
 		initLayout();
 		initProperties();

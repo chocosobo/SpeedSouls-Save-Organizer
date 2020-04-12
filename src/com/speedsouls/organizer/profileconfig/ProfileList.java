@@ -104,7 +104,7 @@ public class ProfileList extends JList<Profile> implements ListCellRenderer<Prof
 			return;
 		boolean areHotkeysEnabled = OrganizerManager.getKeyboardHook().areHotkeysEnabled();
 		OrganizerManager.getKeyboardHook().setHotkeysEnabled(false);
-		String name = JOptionPane.showInputDialog(getParent(), "ÇÁ·ÎÆÄÀÏ ÀÌ¸§: ", "ÇÁ·ÎÆÄÀÏ »ı¼º", JOptionPane.QUESTION_MESSAGE);
+		String name = JOptionPane.showInputDialog(getParent(), "í”„ë¡œíŒŒì¼ ì´ë¦„: ", "í”„ë¡œíŒŒì¼ ìƒì„±", JOptionPane.QUESTION_MESSAGE);
 		boolean nameValidation = validateNameForNewProfile(name);
 		OrganizerManager.getKeyboardHook().setHotkeysEnabled(areHotkeysEnabled);
 		if (nameValidation)
@@ -115,7 +115,7 @@ public class ProfileList extends JList<Profile> implements ListCellRenderer<Prof
 			}
 			catch (Exception e)
 			{
-				JOptionPane.showMessageDialog(getParent(), "ÇÁ·ÎÆÄÀÏ »ı¼º Áß ¿¡·¯°¡ ¹ß»ıÇß½À´Ï´Ù!", "¿¡·¯ ¹ß»ı",
+				JOptionPane.showMessageDialog(getParent(), "í”„ë¡œíŒŒì¼ ìƒì„± ì¤‘ ì—ëŸ¬ê°€ ë°œìƒí–ˆìŠµë‹ˆë‹¤!", "ì—ëŸ¬ ë°œìƒ",
 						JOptionPane.ERROR_MESSAGE);
 			}
 		}
@@ -152,14 +152,14 @@ public class ProfileList extends JList<Profile> implements ListCellRenderer<Prof
 			return false;
 		if (OrganizerManager.containsIllegals(name))
 		{
-			JOptionPane.showMessageDialog(getParent(), "»ç¿ëÇÒ ¼ö ¾ø´Â ¹®ÀÚ¿­ (" + OrganizerManager.ILLEGAL_CHARACTERS + ") Àº(´Â) Çã¿ëµÇÁö ¾Ê½À´Ï´Ù!",
-					"°æ°í", JOptionPane.WARNING_MESSAGE);
+			JOptionPane.showMessageDialog(getParent(), "ì‚¬ìš©í•  ìˆ˜ ì—†ëŠ” ë¬¸ìì—´ (" + OrganizerManager.ILLEGAL_CHARACTERS + ") ì€(ëŠ”) í—ˆìš©ë˜ì§€ ì•ŠìŠµë‹ˆë‹¤!",
+					"ê²½ê³ ", JOptionPane.WARNING_MESSAGE);
 			return false;
 		}
 		File newSaveDir = new File(game.getDirectory() + File.separator + name);
 		if (newSaveDir.exists())
 		{
-			JOptionPane.showMessageDialog(getParent(), "ÀÌ ÇÁ·ÎÆÄÀÏÀº ÀÌ¹Ì Á¸ÀçÇÕ´Ï´Ù!", "ÁÖÀÇ", JOptionPane.WARNING_MESSAGE);
+			JOptionPane.showMessageDialog(getParent(), "ì´ í”„ë¡œíŒŒì¼ì€ ì´ë¯¸ ì¡´ì¬í•©ë‹ˆë‹¤!", "ì£¼ì˜", JOptionPane.WARNING_MESSAGE);
 			return false;
 		}
 		return true;
@@ -180,10 +180,10 @@ public class ProfileList extends JList<Profile> implements ListCellRenderer<Prof
 		OrganizerManager.getKeyboardHook().setHotkeysEnabled(false);
 		if (profiles.size() == 1)
 			confirm = JOptionPane.showConfirmDialog(getParent(),
-					"ÇÁ·ÎÆÄÀÏ '" + profiles.get(0).getName() + "' ¿Í ³»¿ë¹°À» Á¤¸»·Î Á¦°ÅÇÏ½Ã°Ú½À´Ï±î?", "Á¦°Å",
+					"í”„ë¡œíŒŒì¼ '" + profiles.get(0).getName() + "' ì™€ ë‚´ìš©ë¬¼ì„ ì •ë§ë¡œ ì œê±°í•˜ì‹œê² ìŠµë‹ˆê¹Œ?", "ì œê±°",
 					JOptionPane.YES_NO_OPTION);
 		else if (profiles.size() > 1)
-			confirm = JOptionPane.showConfirmDialog(getParent(), "¼±ÅÃÇÑ ¸ğµç ÇÁ·ÎÆÄÀÏÀ» Á¦°ÅÇÏ½Ã°Ú½À´Ï±î?", "Á¦°Å",
+			confirm = JOptionPane.showConfirmDialog(getParent(), "ì„ íƒí•œ ëª¨ë“  í”„ë¡œíŒŒì¼ì„ ì œê±°í•˜ì‹œê² ìŠµë‹ˆê¹Œ?", "ì œê±°",
 					JOptionPane.YES_NO_OPTION);
 		if (confirm == 0)
 			deleteProfiles(profiles);
@@ -220,7 +220,7 @@ public class ProfileList extends JList<Profile> implements ListCellRenderer<Prof
 			return;
 		boolean areHotkeysEnabled = OrganizerManager.getKeyboardHook().areHotkeysEnabled();
 		OrganizerManager.getKeyboardHook().setHotkeysEnabled(false);
-		String newProfileName = (String) JOptionPane.showInputDialog(getParent(), "ÇÁ·ÎÆÄÀÏ ÀÌ¸§: ", "¼öÁ¤ " + profile.getName(),
+		String newProfileName = (String) JOptionPane.showInputDialog(getParent(), "í”„ë¡œíŒŒì¼ ì´ë¦„: ", "ìˆ˜ì • " + profile.getName(),
 				JOptionPane.QUESTION_MESSAGE, null, null, profile.getName());
 		boolean nameValidation = validateNewName(profile, newProfileName);
 		OrganizerManager.getKeyboardHook().setHotkeysEnabled(areHotkeysEnabled);
@@ -258,15 +258,15 @@ public class ProfileList extends JList<Profile> implements ListCellRenderer<Prof
 			return false;
 		if (OrganizerManager.containsIllegals(newName))
 		{
-			JOptionPane.showMessageDialog(getParent(), "»ç¿ëÇÒ ¼ö ¾ø´Â ¹®ÀÚ¿­ (" + OrganizerManager.ILLEGAL_CHARACTERS + ") Àº(´Â) Çã¿ëµÇÁö ¾Ê½À´Ï´Ù!",
-					"°æ°í", JOptionPane.WARNING_MESSAGE);
+			JOptionPane.showMessageDialog(getParent(), "ì‚¬ìš©í•  ìˆ˜ ì—†ëŠ” ë¬¸ìì—´ (" + OrganizerManager.ILLEGAL_CHARACTERS + ") ì€(ëŠ”) í—ˆìš©ë˜ì§€ ì•ŠìŠµë‹ˆë‹¤!",
+					"ê²½ê³ ", JOptionPane.WARNING_MESSAGE);
 			return false;
 		}
 		// if the name exists and the renaming is not a re-capitalization then don't allow renaming
 		File newSaveDir = new File(game.getDirectory() + File.separator + newName);
 		if (newSaveDir.exists() && !profile.getName().equalsIgnoreCase(newName))
 		{
-			JOptionPane.showMessageDialog(getParent(), "°°Àº ÀÌ¸§ÀÌ ÀÌ¹Ì Á¸ÀçÇÕ´Ï´Ù!", "ÁÖÀÇ", JOptionPane.WARNING_MESSAGE);
+			JOptionPane.showMessageDialog(getParent(), "ê°™ì€ ì´ë¦„ì´ ì´ë¯¸ ì¡´ì¬í•©ë‹ˆë‹¤!", "ì£¼ì˜", JOptionPane.WARNING_MESSAGE);
 			return false;
 		}
 		return true;

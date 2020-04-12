@@ -89,7 +89,7 @@ public class SaveListTransferHandler extends TransferHandler
 			if (newPath.toFile().exists())
 			{
 				if (JOptionPane.showConfirmDialog(saveList.getParent(),
-						entry.getName() + " already exists in that directory. Do you want to overwrite?", "Confirmation",
+						entry.getName() + " 이미 이 폴더 안에 존재합니다. 덮어 씌우시겠습니까?", "주의",
 						JOptionPane.YES_NO_OPTION) != 0)
 					return false;
 				SaveListEntry existingEntry = newParentFolder.getChildByName(entry.getName());

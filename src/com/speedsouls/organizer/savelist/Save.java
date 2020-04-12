@@ -62,7 +62,7 @@ public class Save extends SaveListEntry
 		catch (IOException e)
 		{
 			JOptionPane.showMessageDialog(null,
-					"Renaming the entries was not successful. They are possibly being accessed by another program.", "Warning",
+					"이름을 바꾸는데 실패했습니다. 다른 프로그램에 의해 읽히고 있을 수 있습니다.", "주의",
 					JOptionPane.WARNING_MESSAGE);
 			return false;
 		}
@@ -89,7 +89,7 @@ public class Save extends SaveListEntry
 		{
 			label.setIcon(IconFontSwing.buildIcon(Iconic.CHECK, 13, Color.RED));
 			label.setForeground(Color.RED);
-			label.setToolTipText("File does not exist any longer!");
+			label.setToolTipText("파일이 더이상 존재하지 않습니다!");
 		}
 	}
 

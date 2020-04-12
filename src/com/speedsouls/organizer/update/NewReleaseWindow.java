@@ -35,7 +35,7 @@ public class NewReleaseWindow extends JDialog
 	 */
 	public NewReleaseWindow()
 	{
-		super(null, "New Release Available!", Dialog.ModalityType.APPLICATION_MODAL);
+		super(null, "새 버전이 사용 가능합니다!", Dialog.ModalityType.APPLICATION_MODAL);
 
 		initLayout();
 		initProperties();
@@ -85,7 +85,7 @@ public class NewReleaseWindow extends JDialog
 
 	private JButton createNewDownloadButton()
 	{
-		JButton downloadButton = new JButton("Download");
+		JButton downloadButton = new JButton("다운로드");
 		downloadButton.addActionListener(e -> {
 			OrganizerManager.openLatestReleasePage();
 			setVisible(false);

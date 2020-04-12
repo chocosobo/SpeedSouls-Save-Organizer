@@ -44,8 +44,8 @@ public class GameConfigDirectoryPanel extends JPanel
 		File saveFile = game.getSaveFileLocation();
 		File gameDir = game.getDirectory();
 
-		JLabel saveFileLabel = new JLabel("Location of Savefile:");
-		JLabel directoryLabel = new JLabel("Profiles Directory:");
+		JLabel saveFileLabel = new JLabel("세이브 파일 위치:");
+		JLabel directoryLabel = new JLabel("프로파일 위치:");
 
 		JTextField saveFileField = new JTextField(saveFile != null ? saveFile.getPath() : "");
 		JTextField directoryField = new JTextField(gameDir != null ? gameDir.getPath() : "");
@@ -89,7 +89,7 @@ public class GameConfigDirectoryPanel extends JPanel
 	 */
 	private JButton createSaveFileBrowseButton(JTextField saveFileField, JTextField directoryField, Game game)
 	{
-		JButton browseButton = new JButton("Browse");
+		JButton browseButton = new JButton("찾기");
 
 		browseButton.addActionListener(event -> {
 			JFileChooser fc = new JFileChooser(saveFileField.getText());
@@ -100,7 +100,7 @@ public class GameConfigDirectoryPanel extends JPanel
 				File selectedSavefile = fc.getSelectedFile();
 				if (selectedSavefile == null || !selectedSavefile.exists())
 				{
-					JOptionPane.showMessageDialog(null, "This file doesn't exist!", "Error occured", JOptionPane.ERROR_MESSAGE);
+					JOptionPane.showMessageDialog(null, "이 파일은 존재하지 않습니다!", "에러 발생", JOptionPane.ERROR_MESSAGE);
 					return;
 				}
 				if (selectedSavefile.getName().equalsIgnoreCase(game.getSaveName()))
@@ -108,9 +108,9 @@ public class GameConfigDirectoryPanel extends JPanel
 					game.setSaveFileLocation(selectedSavefile);
 					saveFileField.setText(selectedSavefile.getPath());
 					int confirm = JOptionPane.showConfirmDialog(getParent(),
-							"Do you wish to use the directory of this savefile to store the profiles for this game?"
-									+ " You can choose an alternative directory if you wish.",
-							"Choosing Savefile", JOptionPane.YES_NO_OPTION);
+							"이 세이브 파일 위치를 프로파일 저장 위치로 지정합니까??"
+									+ " 원한다면 다른 폴더를 지정할 수 있습니다.",
+							"세이브 파일 선택중", JOptionPane.YES_NO_OPTION);
 					if (confirm == 0)
 					{
 						directoryField.setText(selectedSavefile.getParentFile().getPath());
@@ -122,7 +122,7 @@ public class GameConfigDirectoryPanel extends JPanel
 					OrganizerManager.saveProperties(game);
 					return;
 				}
-				JOptionPane.showMessageDialog(null, "Filename needs to be '" + game.getSaveName() + "'!", "Error occured",
+				JOptionPane.showMessageDialog(null, "파일 명은 반드시 '" + game.getSaveName() + "' 여야 합니다!", "에러 발생",
 						JOptionPane.ERROR_MESSAGE);
 			}
 		});
@@ -139,12 +139,12 @@ public class GameConfigDirectoryPanel extends JPanel
 	 */
 	private JButton createDirectoryBrowseButton(JTextField directoryField, Game game)
 	{
-		JButton browseButton = new JButton("Browse");
+		JButton browseButton = new JButton("찾기");
 
 		browseButton.addActionListener(event -> {
 			if (game.getSaveFileLocation() == null)
 			{
-				JOptionPane.showMessageDialog(null, "Choose a savefile location first before deciding on a profile directory!", "Warning",
+				JOptionPane.showMessageDialog(null, "먼저 세이브 파일 위치를 지정해주세요!", "주의",
 						JOptionPane.WARNING_MESSAGE);
 				return;
 			}
@@ -156,7 +156,7 @@ public class GameConfigDirectoryPanel extends JPanel
 				File selectedDir = fc.getSelectedFile();
 				if (selectedDir == null || !selectedDir.exists())
 				{
-					JOptionPane.showMessageDialog(null, "This directory doesn't exist!", "Error occured", JOptionPane.ERROR_MESSAGE);
+					JOptionPane.showMessageDialog(null, "이 위치는 존재하지 않습니다!", "에러 발생", JOptionPane.ERROR_MESSAGE);
 					return;
 				}
 				directoryField.setText(selectedDir.getPath());

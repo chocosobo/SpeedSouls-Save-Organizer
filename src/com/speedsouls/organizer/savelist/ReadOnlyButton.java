@@ -97,9 +97,9 @@ public class ReadOnlyButton extends JLabel implements MouseListener, ProfileList
 	{
 		super.setEnabled(flag);
 		if (flag)
-			setToolTipText("The current gamefile is read-only.");
+			setToolTipText("이 파일은 현재 읽기 전용입니다.");
 		else
-			setToolTipText("The current gamefile is writable.");
+			setToolTipText("이 파일은 현재 읽고 쓸 수 있습니다.");
 	}
 
 

@@ -42,7 +42,7 @@ public class OrganizerWindow extends JFrame
 
 	public OrganizerWindow()
 	{
-		super("SpeedSouls - Save Organizer");
+		super("스피드 소울 - 세이브 정리기");
 
 		initProperties();
 		initLayout();
@@ -66,7 +66,7 @@ public class OrganizerWindow extends JFrame
 		}
 		catch (Exception e)
 		{
-			JOptionPane.showMessageDialog(this, e.getMessage(), "Error occured", JOptionPane.ERROR_MESSAGE);
+			JOptionPane.showMessageDialog(this, e.getMessage(), "에러 발생", JOptionPane.ERROR_MESSAGE);
 		}
 		setIconImage(OrganizerManager.speedsoulsIcon);
 		setResizable(IS_RESIZABLE);

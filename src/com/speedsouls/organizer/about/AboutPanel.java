@@ -44,14 +44,18 @@ public class AboutPanel extends JPanel
 		layout.setAutoCreateGaps(true);
 		layout.setAutoCreateContainerGaps(true);
 
-		JLabel versionLabel = new JLabel("Version:");
+		JLabel versionLabel = new JLabel("버전:");
 		versionLabel.setFont(getFont().deriveFont(Font.BOLD));
 		JLabel versionNumberLabel = new JLabel(OrganizerManager.VERSION);
 
-		JLabel developerLabel = new JLabel("Developed by:");
+		JLabel developerLabel = new JLabel("개발자:");
 		developerLabel.setFont(getFont().deriveFont(Font.BOLD));
 		JLabel developerLink = createDevLink();
 		JLabel githubLink = createGitHubLink();
+
+		JLabel developerLabel = new JLabel("번역한 놈:");
+		developerLabel.setFont(getFont().deriveFont(Font.BOLD));
+		JLabel developerLabel = new JLabel("초코소보");
 
 		// Horizontal
 		GroupLayout.SequentialGroup hGroup = layout.createSequentialGroup();
@@ -119,5 +123,4 @@ public class AboutPanel extends JPanel
 		});
 		return githubLabel;
 	}
-
 }

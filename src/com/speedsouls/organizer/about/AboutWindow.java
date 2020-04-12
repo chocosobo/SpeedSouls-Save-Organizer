@@ -32,7 +32,7 @@ public class AboutWindow extends JDialog
 	 */
 	public AboutWindow()
 	{
-		super(null, "About SpeedSouls - Save Organizer", Dialog.ModalityType.APPLICATION_MODAL);
+		super(null, "스피드 소울 - 세이브 정리기 상세", Dialog.ModalityType.APPLICATION_MODAL);
 
 		initLayout();
 		initProperties();

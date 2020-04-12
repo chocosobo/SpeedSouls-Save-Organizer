@@ -16,7 +16,7 @@ import com.speedsouls.organizer.savelist.Save;
 public enum GlobalHotkey
 {
 
-	LOAD_SAVE("Load Selected Save:", "None")
+	LOAD_SAVE("선택한 세이브 불러오기:", "지정되지 않음")
 	{
 
 		@Override
@@ -33,7 +33,7 @@ public enum GlobalHotkey
 			return OrganizerManager.PREFS_KEY_GLOBAL_HOTKEY_LOAD;
 		}
 	},
-	READ_ONLY_TOGGLE("Switch Gamefile To Read-Only:", "None")
+	READ_ONLY_TOGGLE("파일을 읽기 전용으로 수정:", "지정되지 않음")
 	{
 
 		@Override
@@ -49,7 +49,7 @@ public enum GlobalHotkey
 			return OrganizerManager.PREFS_KEY_GLOBAL_HOTKEY_READ_ONLY;
 		}
 	},
-	GLOBAL_HOTKEY_TOGGLE("Toggle Global Hotkeys:", "None")
+	GLOBAL_HOTKEY_TOGGLE("글로벌 단축기 토글:", "지정되지 않음")
 	{
 
 		@Override

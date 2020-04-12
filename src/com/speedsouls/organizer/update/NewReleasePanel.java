@@ -34,9 +34,9 @@ public class NewReleasePanel extends JPanel
 		layout.setAutoCreateGaps(true);
 		layout.setAutoCreateContainerGaps(true);
 
-		JLabel newReleaseLabel = new JLabel("New Release Version:");
+		JLabel newReleaseLabel = new JLabel("새 버전:");
 		JLabel versionLabel = new JLabel(OrganizerManager.getLatestReleaseVersion());
-		JLabel changelogLabel = new JLabel("Changelog:");
+		JLabel changelogLabel = new JLabel("변경점:");
 
 		String description = OrganizerManager.getLatestReleaseDescription().replaceAll("\\R", "<br>");
 

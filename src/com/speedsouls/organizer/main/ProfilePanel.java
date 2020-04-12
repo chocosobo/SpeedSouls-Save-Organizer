@@ -39,8 +39,8 @@ public class ProfilePanel extends JPanel
 		layout.setAutoCreateGaps(true);
 		layout.setAutoCreateContainerGaps(true);
 
-		JLabel gamesLabel = new JLabel("Game:");
-		JLabel profilesLabel = new JLabel("Profile:");
+		JLabel gamesLabel = new JLabel("게임:");
+		JLabel profilesLabel = new JLabel("프로파일:");
 
 		ProfilesComboBox profilesComboBox = createProfilesComboBox();
 		GamesComboBox gamesComboBox = createGameComboBox(profilesComboBox);
@@ -105,7 +105,7 @@ public class ProfilePanel extends JPanel
 	 */
 	private JButton createEditProfilesButton()
 	{
-		JButton editButton = new JButton("Edit profiles");
+		JButton editButton = new JButton("프로파일 수정");
 		editButton.addActionListener(event -> {
 			new ProfileConfigurationWindow();
 		});

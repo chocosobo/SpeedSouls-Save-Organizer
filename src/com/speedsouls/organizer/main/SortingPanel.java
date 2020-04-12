@@ -32,7 +32,7 @@ public class SortingPanel extends JPanel
 	{
 		GroupLayout layout = new GroupLayout(this);
 
-		JLabel sortByLabel = new JLabel("Sort by:");
+		JLabel sortByLabel = new JLabel("Á¤·Ä:");
 		SortingComboBox sortingComboBox = new SortingComboBox();
 		sortingComboBox
 				.setPreferredSize(new Dimension(sortingComboBox.getPreferredSize().width + 2, sortingComboBox.getPreferredSize().height));

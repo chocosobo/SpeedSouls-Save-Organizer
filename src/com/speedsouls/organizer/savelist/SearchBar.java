@@ -26,7 +26,7 @@ public class SearchBar extends JTextField implements FocusListener, KeyListener
 
 	private static final long serialVersionUID = -1608497657232185005L;
 
-	public static final String DEFAULT_TEXT = "Search...";
+	public static final String DEFAULT_TEXT = "°Ë»ö...";
 	private static final int SEARCH_DELAY = 500;
 
 	private Timer searchDelayTimer;

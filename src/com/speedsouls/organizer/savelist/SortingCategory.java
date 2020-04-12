@@ -20,7 +20,7 @@ import java.nio.file.attribute.FileTime;
 public enum SortingCategory
 {
 
-	ALPHABET("Alphabet")
+	ALPHABET("가나다순")
 	{
 
 		@Override
@@ -29,7 +29,7 @@ public enum SortingCategory
 			return s1.getFile().getName().compareToIgnoreCase(s2.getName());
 		}
 	},
-	DATE("Created")
+	DATE("최신순")
 	{
 
 		@Override
@@ -53,7 +53,7 @@ public enum SortingCategory
 			return 0;
 		}
 	},
-	READ_ONLY("Read Only")
+	READ_ONLY("읽기 전용")
 	{
 
 		@Override

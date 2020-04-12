@@ -97,7 +97,7 @@ public class ButtonPanel extends JPanel
 	 */
 	private JButton createImportButton()
 	{
-		JButton importButton = new JButton("Import Savestate");
+		JButton importButton = new JButton("세이브 파일 저장");
 		importButton.setIcon(IconFontSwing.buildIcon(Iconic.CURVED_ARROW, 16, new Color(30, 144, 255)));
 		importButton.addActionListener(event -> {
 			Profile profile = OrganizerManager.getSelectedProfile();
@@ -107,8 +107,8 @@ public class ButtonPanel extends JPanel
 				return;
 			}
 			JOptionPane.showMessageDialog(null,
-					"Create a profile before trying to import a savefile! You can do this in the profile configuration settings.",
-					"Warning", JOptionPane.WARNING_MESSAGE);
+					"저장하기 전에 프로파일을 생성해주세요! 프로파일 설정에서 생성할 수 있습니다.",
+					"주의", JOptionPane.WARNING_MESSAGE);
 		});
 		return importButton;
 	}
@@ -122,7 +122,7 @@ public class ButtonPanel extends JPanel
 	 */
 	private JButton createLoadButton()
 	{
-		JButton loadButton = new JButton("Load Savestate");
+		JButton loadButton = new JButton("세이브 불러오기");
 		loadButton.setIcon(IconFontSwing.buildIcon(Elusive.REPEAT, 15, new Color(39, 174, 96)));
 		loadButton.addActionListener(event -> {
 			SaveListEntry entry = OrganizerManager.getSelectedEntry();
@@ -140,12 +140,12 @@ public class ButtonPanel extends JPanel
 	 */
 	private JButton createReplaceButton()
 	{
-		JButton replaceButton = new JButton("Replace Savestate");
+		JButton replaceButton = new JButton("세이브 덮어쓰기");
 		replaceButton.setIcon(IconFontSwing.buildIcon(Elusive.REFRESH, 15, new Color(255, 168, 0)));
 		replaceButton.addActionListener(event -> {
 			Save selectedSave = (Save) OrganizerManager.getSelectedEntry();
-			int confirm = JOptionPane.showConfirmDialog(getParent(), "Do you really want to replace '" + selectedSave.getName() + "'?",
-					"Replace " + selectedSave.getName(), JOptionPane.YES_NO_OPTION);
+			int confirm = JOptionPane.showConfirmDialog(getParent(), "정말로 이 세이브에 덮어쓸까요?  '" + selectedSave.getName() + "'",
+					"덮어쓰기 " + selectedSave.getName(), JOptionPane.YES_NO_OPTION);
 			if (confirm != 0)
 				return;
 			OrganizerManager.importAndReplaceSavefile(selectedSave);

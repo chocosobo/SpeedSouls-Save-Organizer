@@ -60,16 +60,16 @@ import jiconfont.swing.IconFontSwing;
 public class OrganizerManager
 {
 
-	public static final String VERSION = "1.4.1";
+	public static final String VERSION = "1.4.1.k";
 
 	/**
 	 * Constants defining various URLs.
 	 */
-	public static final String WEB_PAGE_URL = "www.speedsouls.com/SpeedSouls_-_Save_Organizer";
-	public static final String GITHUB_REPO_URL = "www.github.com/Kahmul/SpeedSouls-Save-Organizer";
+	public static final String WEB_PAGE_URL = "github.com/chocosobo/SpeedSouls-Save-Organizer";
+	public static final String GITHUB_REPO_URL = "github.com/chocosobo/SpeedSouls-Save-Organizer";
 	public static final String TWITTER_URL = "www.twitter.com/Kahmul78";
-	public static final String LATEST_RELEASE_JSON_URL = "https://api.github.com/repos/Kahmul/SpeedSouls-Save-Organizer/releases/latest";
-	public static final String LATEST_RELEASE_URL = "https://github.com/Kahmul/SpeedSouls-Save-Organizer/releases";
+	public static final String LATEST_RELEASE_JSON_URL = "https://api.github.com/repos/chocosobo/SpeedSouls-Save-Organizer/releases/latest";
+	public static final String LATEST_RELEASE_URL = "https://github.com/chocosobo/SpeedSouls-Save-Organizer/releases/";
 
 	/**
 	 * Constants for paths to preferences and resources.
@@ -102,7 +102,7 @@ public class OrganizerManager
 
 	public static final String PREFS_ERROR_ON_RETRIEVE = "ERROR";
 
-	public static final String ILLEGAL_CHARACTERS = "~, @, *, {, }, <, >, [, ], |, “, ”, \\, /, ^";
+	public static final String ILLEGAL_CHARACTERS = "~, @, *, {, }, <, >, [, ], |, ? ? \\, /, ^";
 	private static final String ILLEGAL_CHARACTERS_REGEX = "[~#@*{}<>\\[\\]|\"\\^\\\\\\/]";
 
 	private static Preferences prefs;
@@ -134,8 +134,8 @@ public class OrganizerManager
 		}
 		catch (IOException e)
 		{
-			JOptionPane.showMessageDialog(null, "Error when trying to initialize the data. Could not start the Save Organizer.",
-					"Error occured", JOptionPane.ERROR_MESSAGE);
+			JOptionPane.showMessageDialog(null, "½ÇÇà Áß µ¥ÀÌÅÍ¸¦ ÀÐ¾îµéÀÌÁö ¸ø Çß½À´Ï´Ù. Á¤¸®±â¸¦ ½ÃÀÛÇÏÁö ¸ø Çß½À´Ï´Ù.",
+					"¿¡·¯ ¹ß»ý", JOptionPane.ERROR_MESSAGE);
 			System.exit(1);
 		}
 	}
@@ -225,8 +225,8 @@ public class OrganizerManager
 		}
 		catch (NativeHookException e)
 		{
-			JOptionPane.showMessageDialog(mainWindow, "Error when trying to establish the keyboard hook. Global hotkeys will be disabled.",
-					"Error occured", JOptionPane.ERROR_MESSAGE);
+			JOptionPane.showMessageDialog(mainWindow, "Å°º¸µå ÈÄÅ© Áß ¹®Á¦°¡ »ý°å½À´Ï´Ù. ±Û·Î¹ú ´ÜÃàÅ°°¡ ºñÈ°¼ºÈ­ µÇ¾ú½À´Ï´Ù.",
+					"¿¡·¯ ¹ß»ý", JOptionPane.ERROR_MESSAGE);
 			keyboardHook.setHotkeysEnabled(false);
 		}
 	}
@@ -459,7 +459,7 @@ public class OrganizerManager
 			}
 			catch (Exception e)
 			{
-				JOptionPane.showMessageDialog(mainWindow, "Error when trying to import the profiles!", "Error occured",
+				JOptionPane.showMessageDialog(mainWindow, "ÇÁ·ÎÆÄÀÏÀ» ºÒ·¯¿À´Âµ¥ ½ÇÆÐÇß½À´Ï´Ù!", "¿¡·¯ ¹ß»ý",
 						JOptionPane.ERROR_MESSAGE);
 			}
 		}
@@ -524,7 +524,7 @@ public class OrganizerManager
 		File dir = new File(parent.getFile().getPath() + File.separator + name);
 		if (dir.exists())
 		{
-			JOptionPane.showMessageDialog(mainWindow, "This folder already exists!", "Error occured", JOptionPane.ERROR_MESSAGE);
+			JOptionPane.showMessageDialog(mainWindow, "ÀÌ Æú´õ´Â ÀÌ¹Ì Á¸ÀçÇÕ´Ï´Ù!", "¿¡·¯ ¹ß»ý", JOptionPane.ERROR_MESSAGE);
 			return;
 		}
 		dir.mkdirs();
@@ -545,7 +545,7 @@ public class OrganizerManager
 		if (getSelectedGame().getSaveFileLocation() == null)
 		{
 			JOptionPane.showMessageDialog(mainWindow,
-					"To import a savefile you need to set the savefile location in the profile configuration settings!", "Error occured",
+					"¼¼ÀÌºê ÆÄÀÏÀ» ºÒ·¯¿À·Á¸é ÇÁ·ÎÆÄÀÏ¿¡ À§Ä¡¸¦ ¼³Á¤ÇØ¾ßÇÕ´Ï´Ù!", "¿¡·¯ ¹ß»ý",
 					JOptionPane.WARNING_MESSAGE);
 			return null;
 		}
@@ -560,7 +560,7 @@ public class OrganizerManager
 		}
 		catch (IOException e)
 		{
-			JOptionPane.showMessageDialog(mainWindow, "Error when trying to import the savefile!", "Error occured",
+			JOptionPane.showMessageDialog(mainWindow, "¼¼ÀÌºê ÆÄÀÏÀ» ºÒ·¯¿À´ø Áß ¿¡·¯°¡ ¹ß»ýÇß½À´Ï´Ù!", "¿¡·¯ ¹ß»ý",
 					JOptionPane.ERROR_MESSAGE);
 		}
 		return newFile;
@@ -590,7 +590,7 @@ public class OrganizerManager
 		}
 		catch (Exception e)
 		{
-			JOptionPane.showMessageDialog(mainWindow, "Error when trying to load the savefile!", "Error occured",
+			JOptionPane.showMessageDialog(mainWindow, "¼¼ÀÌºê ÆÄÀÏÀ» ºÒ·¯¿À´ø Áß ¿¡·¯°¡ ¹ß»ýÇß½À´Ï´Ù!", "¿¡·¯ ¹ß»ý",
 					JOptionPane.ERROR_MESSAGE);
 		}
 		gameFile.setWritable(canWriteSaveFile);
@@ -610,7 +610,7 @@ public class OrganizerManager
 		}
 		catch (Exception e)
 		{
-			JOptionPane.showMessageDialog(mainWindow, e.getMessage(), "Error occured", JOptionPane.ERROR_MESSAGE);
+			JOptionPane.showMessageDialog(mainWindow, e.getMessage(), "¿¡·¯ ¹ß»ý", JOptionPane.ERROR_MESSAGE);
 		}
 	}
 
@@ -626,7 +626,7 @@ public class OrganizerManager
 		}
 		catch (Exception e)
 		{
-			JOptionPane.showMessageDialog(mainWindow, e.getMessage(), "Error occured", JOptionPane.ERROR_MESSAGE);
+			JOptionPane.showMessageDialog(mainWindow, e.getMessage(), "¿¡·¯ ¹ß»ý", JOptionPane.ERROR_MESSAGE);
 		}
 	}
 

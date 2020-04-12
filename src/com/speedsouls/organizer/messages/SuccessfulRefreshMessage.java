@@ -20,7 +20,7 @@ public class SuccessfulRefreshMessage extends AbstractMessage
 
 	private static final long serialVersionUID = -2151979076153299908L;
 
-	private static final String MESSAGE = "REFRESH SUCCESSFUL";
+	private static final String MESSAGE = "성공적으로 새로고침 됨";
 	private static final IconCode ICON = Elusive.REPEAT;
 	private static final Color COLOR = new Color(138, 43, 226);
 

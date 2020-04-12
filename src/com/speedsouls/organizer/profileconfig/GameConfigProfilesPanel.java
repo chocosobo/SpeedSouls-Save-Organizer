@@ -39,7 +39,7 @@ public class GameConfigProfilesPanel extends JPanel
 		layout.setAutoCreateGaps(true);
 		layout.setAutoCreateContainerGaps(true);
 
-		JLabel profileLabel = new JLabel("Profiles: ");
+		JLabel profileLabel = new JLabel("프로파일: ");
 
 		ProfileList profileList = createProfileList(game);
 		JScrollPane listPane = new JScrollPane(profileList, JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED,
@@ -104,24 +104,6 @@ public class GameConfigProfilesPanel extends JPanel
 		return buttonPanel;
 	}
 
-
-	/**
-	 * Creates the 'Import' button.
-	 * 
-	 * @return the import button
-	 */
-	private JButton createImportButton(ProfileList profileList)
-	{
-		JButton importButton = new JButton("Import");
-		importButton.setToolTipText("Import profile(s)");
-		importButton.addActionListener(event -> {
-			profileList.askToImportProfiles();
-		});
-
-		return importButton;
-	}
-
-
 	/**
 	 * Creates the 'New' button.
 	 * 
@@ -130,8 +112,8 @@ public class GameConfigProfilesPanel extends JPanel
 	 */
 	private JButton createNewButton(ProfileList profileList)
 	{
-		JButton newButton = new JButton("New");
-		newButton.setToolTipText("Create a new profile");
+		JButton newButton = new JButton("새로 만들기");
+		newButton.setToolTipText("새 프로파일을 만듭니다");
 		newButton.addActionListener(event -> {
 			profileList.askToCreateProfile();
 		});
@@ -147,14 +129,29 @@ public class GameConfigProfilesPanel extends JPanel
 	 */
 	private JButton createEditButton(ProfileList profileList)
 	{
-		JButton editButton = new JButton("Edit");
-		editButton.setToolTipText("Edit the selected profile");
+		JButton editButton = new JButton("수정");
+		editButton.setToolTipText("선택한 프로파일을 수정합니다");
 		editButton.addActionListener(event -> {
 			profileList.askToEditProfile(profileList.getSelectedValue());
 		});
 		return editButton;
 	}
 
+	/**
+	 * Creates the 'Import' button.
+	 * 
+	 * @return the import button
+	 */
+	private JButton createImportButton(ProfileList profileList)
+	{
+		JButton importButton = new JButton("불러오기");
+		importButton.setToolTipText("프로파일을 불러옵니다");
+		importButton.addActionListener(event -> {
+			profileList.askToImportProfiles();
+		});
+
+		return importButton;
+	}
 
 	/**
 	 * Creates the 'Delete' button.
@@ -164,8 +161,8 @@ public class GameConfigProfilesPanel extends JPanel
 	 */
 	private JButton createDeleteButton(ProfileList profileList)
 	{
-		JButton deleteButton = new JButton("Delete");
-		deleteButton.setToolTipText("Delete the selected profile");
+		JButton deleteButton = new JButton("제거");
+		deleteButton.setToolTipText("선택한 프로파일을 제거합니다");
 		deleteButton.addActionListener(event -> {
 			profileList.askToDeleteProfiles(profileList.getSelectedValuesList());
 		});

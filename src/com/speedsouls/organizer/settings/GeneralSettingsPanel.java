@@ -43,10 +43,10 @@ public class GeneralSettingsPanel extends JPanel
 
 		Component glue = Box.createHorizontalGlue();
 
-		JLabel alwaysOnTopLabel = new JLabel("Always On Top:");
+		JLabel alwaysOnTopLabel = new JLabel("항상 위에:");
 		alwaysOnTopCheckBox = new JCheckBox("", OrganizerManager.isAlwaysOnTop());
 
-		JLabel hotkeysLabel = new JLabel("Global Hotkeys:");
+		JLabel hotkeysLabel = new JLabel("글로벌 단축키:");
 		hotkeysCheckbox = new JCheckBox("", OrganizerManager.areGlobalHotkeysEnabled());
 
 		// Horizontal
@@ -68,7 +68,7 @@ public class GeneralSettingsPanel extends JPanel
 		layout.setVerticalGroup(vGroup);
 
 		setLayout(layout);
-		setBorder(BorderFactory.createTitledBorder(BorderFactory.createEtchedBorder(EtchedBorder.LOWERED), "General"));
+		setBorder(BorderFactory.createTitledBorder(BorderFactory.createEtchedBorder(EtchedBorder.LOWERED), "일반"));
 	}
 
 

@@ -141,7 +141,7 @@ public class SaveList extends JList<SaveListEntry> implements ListCellRenderer<S
 		}
 		catch (Exception e)
 		{
-			JOptionPane.showMessageDialog(getParent(), "Error occured when trying to refresh from the file system.", "Error occured",
+			JOptionPane.showMessageDialog(getParent(), "파일 시스템을 새로고침하는 중 에러가 발생했습니다.", "에러 발생",
 					JOptionPane.ERROR_MESSAGE);
 			return;
 		}
@@ -185,7 +185,7 @@ public class SaveList extends JList<SaveListEntry> implements ListCellRenderer<S
 		{
 			boolean areHotkeysEnabled = OrganizerManager.getKeyboardHook().areHotkeysEnabled();
 			OrganizerManager.getKeyboardHook().setHotkeysEnabled(false);
-			JOptionPane.showMessageDialog(getParent(), "Cannot open a folder with no contents!", "Info", JOptionPane.INFORMATION_MESSAGE);
+			JOptionPane.showMessageDialog(getParent(), "아무런 컨텐츠가 없는 폴더는 열 수 없습니다!", "안내", JOptionPane.INFORMATION_MESSAGE);
 			OrganizerManager.getKeyboardHook().setHotkeysEnabled(areHotkeysEnabled);
 			return;
 		}
@@ -228,7 +228,7 @@ public class SaveList extends JList<SaveListEntry> implements ListCellRenderer<S
 	{
 		boolean areHotkeysEnabled = OrganizerManager.getKeyboardHook().areHotkeysEnabled();
 		OrganizerManager.getKeyboardHook().setHotkeysEnabled(false);
-		String name = JOptionPane.showInputDialog(getParent(), "Folder name: ", "Create Folder", JOptionPane.QUESTION_MESSAGE);
+		String name = JOptionPane.showInputDialog(getParent(), "폴더 이름: ", "폴더 생성", JOptionPane.QUESTION_MESSAGE);
 		boolean nameValidation = validateNameForNewFolder(name);
 		OrganizerManager.getKeyboardHook().setHotkeysEnabled(areHotkeysEnabled);
 		if (nameValidation)
@@ -239,7 +239,7 @@ public class SaveList extends JList<SaveListEntry> implements ListCellRenderer<S
 			}
 			catch (Exception e)
 			{
-				JOptionPane.showMessageDialog(getParent(), "Error occured when trying to create the folder!", "Error occured",
+				JOptionPane.showMessageDialog(getParent(), "폴더를 생성하던 중 에러가 발생했습니다!", "에러 발생",
 						JOptionPane.ERROR_MESSAGE);
 			}
 		}
@@ -261,8 +261,8 @@ public class SaveList extends JList<SaveListEntry> implements ListCellRenderer<S
 			return false;
 		if (OrganizerManager.containsIllegals(name))
 		{
-			JOptionPane.showMessageDialog(getParent(), "Illegal characters (" + OrganizerManager.ILLEGAL_CHARACTERS + ") are not allowed!",
-					"Warning", JOptionPane.WARNING_MESSAGE);
+			JOptionPane.showMessageDialog(getParent(), "사용할 수 없는 문자열 (" + OrganizerManager.ILLEGAL_CHARACTERS + ") 은(는) 허용되지 않습니다!",
+					"경고", JOptionPane.WARNING_MESSAGE);
 			return false;
 		}
 		SaveListEntry parent = getSelectedValue();
@@ -273,7 +273,7 @@ public class SaveList extends JList<SaveListEntry> implements ListCellRenderer<S
 		File newSaveDir = new File(parent.getFile() + File.separator + name);
 		if (newSaveDir.exists())
 		{
-			JOptionPane.showMessageDialog(getParent(), "This folder already exists!", "Warning", JOptionPane.WARNING_MESSAGE);
+			JOptionPane.showMessageDialog(getParent(), "이 폴더는 이미 존재합니다!", "주의", JOptionPane.WARNING_MESSAGE);
 			return false;
 		}
 		return true;
@@ -294,20 +294,20 @@ public class SaveList extends JList<SaveListEntry> implements ListCellRenderer<S
 		OrganizerManager.getKeyboardHook().setHotkeysEnabled(false);
 		if (entries.size() == 1)
 			confirm = JOptionPane.showConfirmDialog(getParent(),
-					"Do you really want to delete '" + entries.get(0).getName() + "'"
-							+ (entries.get(0) instanceof Folder ? " and all of its contents?" : "?"),
-					"Delete " + entries.get(0).getName(), JOptionPane.YES_NO_OPTION);
+					"정말로 '" + entries.get(0).getName() + "' 폴더와"
+							+ (entries.get(0) instanceof Folder ? " 내용물을 전부 제거합니까?" : "?"),
+					"제거 " + entries.get(0).getName(), JOptionPane.YES_NO_OPTION);
 		else if (entries.size() > 1)
 			confirm = JOptionPane.showConfirmDialog(getParent(),
-					"Do you really want to delete all your selected files and their sub-contents, if any?", "Delete",
+					"정말로 선택한 모든 폴더와 내용물을 남김없이 제거합니까?", "제거",
 					JOptionPane.YES_NO_OPTION);
 		for (SaveListEntry saveListEntry : entries)
 		{
 			// if the parent file cannot be written to, then deletion cannot happen
 			if (!saveListEntry.getFile().getParentFile().canWrite())
 			{
-				JOptionPane.showMessageDialog(getParent(), "Couldn't delete files. They are probably being accessed by another program.",
-						"Warning", JOptionPane.WARNING_MESSAGE);
+				JOptionPane.showMessageDialog(getParent(), "파일을 지울 수 없습니다.다른 프로그램에 의해 읽히고 있을 수 있습니다.",
+						"경고", JOptionPane.WARNING_MESSAGE);
 				return;
 			}
 		}
@@ -346,14 +346,14 @@ public class SaveList extends JList<SaveListEntry> implements ListCellRenderer<S
 			return;
 		boolean areHotkeysEnabled = OrganizerManager.getKeyboardHook().areHotkeysEnabled();
 		OrganizerManager.getKeyboardHook().setHotkeysEnabled(false);
-		String newName = (String) JOptionPane.showInputDialog(getParent(), (entry instanceof Folder ? "Folder name: " : "Save name: "),
-				"Edit " + entry.getName(), JOptionPane.QUESTION_MESSAGE, null, null, entry.getName());
+		String newName = (String) JOptionPane.showInputDialog(getParent(), (entry instanceof Folder ? "폴더 이름: " : "이름 저장: "),
+				"수정 " + entry.getName(), JOptionPane.QUESTION_MESSAGE, null, null, entry.getName());
 		boolean nameValidation = validateNewName(entry, newName);
 		OrganizerManager.getKeyboardHook().setHotkeysEnabled(areHotkeysEnabled);
 		if (!entry.canBeRenamed())
 		{
 			JOptionPane.showMessageDialog(getParent(),
-					"This entry can currently not be renamed. It is probably being accessed by another program.", "Warning",
+					"현재 이 엔트리는 이름을 바꿀 수 없습니다. 다른 프로그램에 의해 읽히고 있을 수 있습니다.", "경고",
 					JOptionPane.WARNING_MESSAGE);
 			return;
 		}
@@ -391,15 +391,15 @@ public class SaveList extends JList<SaveListEntry> implements ListCellRenderer<S
 			return false;
 		if (OrganizerManager.containsIllegals(newName))
 		{
-			JOptionPane.showMessageDialog(getParent(), "Illegal characters (" + OrganizerManager.ILLEGAL_CHARACTERS + ") are not allowed!",
-					"Warning", JOptionPane.WARNING_MESSAGE);
+			JOptionPane.showMessageDialog(getParent(), "사용할 수 없는 문자열 (" + OrganizerManager.ILLEGAL_CHARACTERS + ") 은(는) 허용되지 않습니다!",
+					"경고", JOptionPane.WARNING_MESSAGE);
 			return false;
 		}
 		// if the name exists and the renaming is not a re-capitalization then don't allow renaming
 		File newSaveDir = new File(entry.getFile().getParentFile() + File.separator + newName);
 		if (newSaveDir.exists() && !entry.getName().equalsIgnoreCase(newName))
 		{
-			JOptionPane.showMessageDialog(getParent(), "This name already exists!", "Warning", JOptionPane.WARNING_MESSAGE);
+			JOptionPane.showMessageDialog(getParent(), "이 이름은 이미 존재합니다!", "주의", JOptionPane.WARNING_MESSAGE);
 			return false;
 		}
 		return true;

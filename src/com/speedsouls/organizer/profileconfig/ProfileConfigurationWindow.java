@@ -31,7 +31,7 @@ public class ProfileConfigurationWindow extends JDialog
 	 */
 	public ProfileConfigurationWindow()
 	{
-		super(OrganizerManager.getMainWindow(), "Profile Configuration", Dialog.ModalityType.APPLICATION_MODAL);
+		super(OrganizerManager.getMainWindow(), "프로파일 설정", Dialog.ModalityType.APPLICATION_MODAL);
 
 		initLayout();
 		initProperties();

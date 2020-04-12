@@ -62,7 +62,7 @@ public class SettingsContextMenu extends JPopupMenu implements PopupMenuListener
 	 */
 	private JMenuItem createSettingsItem()
 	{
-		JMenuItem itemSettings = new JMenuItem("Settings");
+		JMenuItem itemSettings = new JMenuItem("설정");
 		itemSettings.addActionListener(event -> {
 			new SettingsWindow();
 		});
@@ -77,7 +77,7 @@ public class SettingsContextMenu extends JPopupMenu implements PopupMenuListener
 	 */
 	private JMenuItem createAboutItem()
 	{
-		JMenuItem itemAbout = new JMenuItem("About");
+		JMenuItem itemAbout = new JMenuItem("안내");
 		itemAbout.addActionListener(event -> new AboutWindow());
 		return itemAbout;
 	}
@@ -90,7 +90,7 @@ public class SettingsContextMenu extends JPopupMenu implements PopupMenuListener
 	 */
 	private JMenuItem createHelpItem()
 	{
-		JMenuItem itemHelp = new JMenuItem("Help");
+		JMenuItem itemHelp = new JMenuItem("도움");
 		itemHelp.setAccelerator(KeyStroke.getKeyStroke("F1"));
 		itemHelp.setMnemonic(KeyEvent.VK_F1);
 		itemHelp.setToolTipText(OrganizerManager.WEB_PAGE_URL);

@@ -19,11 +19,11 @@ import com.speedsouls.organizer.profileconfig.Profile;
 public enum Game
 {
 
-	DARK_SOULS("Dark Souls", "DS1", "DRAKS0005.sl2"),
-	DARK_SOULS_REMASTERED("Dark Souls Remastered", "DSR", "DRAKS0005.sl2"),
-	DARK_SOULS_II("Dark Souls II", "DS2", "DARKSII0000.sl2"),
-	DARK_SOULS_II_SOTFS("Dark Souls II: SotFS", "DS2SOTFS", "DS2SOFS0000.sl2"),
-	DARK_SOULS_III("Dark Souls III", "DS3", "DS30000.sl2");
+	DARK_SOULS("促农 家匡", "DS1", "DRAKS0005.sl2"),
+	DARK_SOULS_REMASTERED("埅家 府付", "DSR", "DRAKS0005.sl2"),
+	DARK_SOULS_II("埅家 II", "DS2", "DARKSII0000.sl2"),
+	DARK_SOULS_II_SOTFS("胶裁扼", "DS2SOTFS", "DS2SOFS0000.sl2"),
+	DARK_SOULS_III("埅家 III", "DS3", "DS30000.sl2");
 
 	private String caption;
 	private String abbr;

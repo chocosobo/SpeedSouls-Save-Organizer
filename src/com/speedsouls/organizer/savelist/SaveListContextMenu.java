@@ -92,7 +92,7 @@ public class SaveListContextMenu extends JPopupMenu
 	 */
 	private JMenuItem createAddItem(SaveList saveList)
 	{
-		JMenuItem itemAdd = new JMenuItem("Add Folder");
+		JMenuItem itemAdd = new JMenuItem("폴더 추가");
 		itemAdd.setIcon(IconFontSwing.buildIcon(Elusive.PLUS_SIGN, 15, new Color(39, 174, 96)));
 		itemAdd.addActionListener(event -> {
 			saveList.askToCreateFolder();
@@ -108,7 +108,7 @@ public class SaveListContextMenu extends JPopupMenu
 	 */
 	private JMenuItem createRemoveItem(SaveList saveList)
 	{
-		JMenuItem itemRemove = new JMenuItem("Delete");
+		JMenuItem itemRemove = new JMenuItem("제거");
 		itemRemove.setIcon(IconFontSwing.buildIcon(Iconic.CHECK, 18, new Color(231, 76, 60)));
 		itemRemove.setAccelerator(KeyStroke.getKeyStroke("DELETE"));
 		itemRemove.addActionListener(event -> {
@@ -125,7 +125,7 @@ public class SaveListContextMenu extends JPopupMenu
 	 */
 	private JMenuItem createEditItem(SaveList saveList)
 	{
-		JMenuItem itemEdit = new JMenuItem("Rename");
+		JMenuItem itemEdit = new JMenuItem("이름 바꾸기");
 		itemEdit.setIcon(IconFontSwing.buildIcon(Elusive.EDIT, 15, new Color(243, 156, 18)));
 		itemEdit.setAccelerator(KeyStroke.getKeyStroke("F2"));
 		itemEdit.addActionListener(event -> {
@@ -142,7 +142,7 @@ public class SaveListContextMenu extends JPopupMenu
 	 */
 	private JCheckBoxMenuItem createReadOnlyItem(SaveList saveList)
 	{
-		JCheckBoxMenuItem itemReadOnly = new JCheckBoxMenuItem("Read-Only");
+		JCheckBoxMenuItem itemReadOnly = new JCheckBoxMenuItem("읽기 전용");
 		itemReadOnly.addActionListener(event -> {
 			saveList.getSelectedValue().getFile().setWritable(!itemReadOnly.isSelected());
 			if (OrganizerManager.getSelectedSortingCategory() == SortingCategory.READ_ONLY)
@@ -155,7 +155,7 @@ public class SaveListContextMenu extends JPopupMenu
 
 	private JMenuItem createRefreshItem(SaveList saveList)
 	{
-		JMenuItem itemRefresh = new JMenuItem("Refresh From File System");
+		JMenuItem itemRefresh = new JMenuItem("새로 고침");
 		itemRefresh.setIcon(IconFontSwing.buildIcon(Elusive.REPEAT, 15, new Color(138, 43, 226)));
 		itemRefresh.addActionListener(event -> {
 			saveList.refresh();
@@ -169,7 +169,7 @@ public class SaveListContextMenu extends JPopupMenu
 	 */
 	private JMenuItem createOpenInExplorerItem(SaveList saveList)
 	{
-		JMenuItem itemOpenInExplorer = new JMenuItem("Open Folder In Explorer");
+		JMenuItem itemOpenInExplorer = new JMenuItem("파일 탐색기에서 폴더 열기");
 		itemOpenInExplorer.setIcon(IconFontSwing.buildIcon(Entypo.EXPORT, 15, new Color(30, 144, 255)));
 		itemOpenInExplorer.addActionListener(event -> {
 			SaveListEntry entry = saveList.getSelectedValue();
@@ -187,7 +187,7 @@ public class SaveListContextMenu extends JPopupMenu
 			}
 			catch (Exception e)
 			{
-				JOptionPane.showMessageDialog(null, "Error when trying to open the explorer!", "Error occured", JOptionPane.ERROR_MESSAGE);
+				JOptionPane.showMessageDialog(null, "파일 탐색기를 여는 중 에러가 발생했습니다!", "에러 발생", JOptionPane.ERROR_MESSAGE);
 			}
 		});
 		return itemOpenInExplorer;

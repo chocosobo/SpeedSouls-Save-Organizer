@@ -97,7 +97,7 @@ public class Folder extends SaveListEntry
 		catch (IOException e)
 		{
 			JOptionPane.showMessageDialog(null,
-					"Renaming the entries was not successful. They are possibly being accessed by another program.", "Warning",
+					"이름을 바꾸는데 실패했습니다. 다른 프로그램에 의해 읽히고 있을 수 있습니다.", "주의",
 					JOptionPane.WARNING_MESSAGE);
 			return false;
 		}
@@ -147,7 +147,7 @@ public class Folder extends SaveListEntry
 		{
 			color = Color.RED;
 			label.setForeground(Color.RED);
-			label.setToolTipText("Directory does not exist any longer!");
+			label.setToolTipText("위치가 더이상 존재하지 않습니다!");
 		}
 		if (isClosed())
 			label.setIcon(IconFontSwing.buildIcon(FontAwesome.FOLDER, ICON_SIZE, color));

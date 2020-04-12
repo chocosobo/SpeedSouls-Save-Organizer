@@ -20,7 +20,7 @@ public class SuccessfulImportMessage extends AbstractMessage
 
 	private static final long serialVersionUID = 3917031603377354547L;
 
-	private static final String MESSAGE = "IMPORT SUCCESSFUL";
+	private static final String MESSAGE = "성공적으로 저장됨";
 	private static final IconCode ICON = Iconic.CURVED_ARROW;
 	private static final Color COLOR = new Color(30, 144, 255);
 

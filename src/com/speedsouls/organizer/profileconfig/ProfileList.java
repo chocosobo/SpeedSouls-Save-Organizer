@@ -104,7 +104,7 @@ public class ProfileList extends JList<Profile> implements ListCellRenderer<Prof
 			return;
 		boolean areHotkeysEnabled = OrganizerManager.getKeyboardHook().areHotkeysEnabled();
 		OrganizerManager.getKeyboardHook().setHotkeysEnabled(false);
-		String name = JOptionPane.showInputDialog(getParent(), "Profile name: ", "Create Profile", JOptionPane.QUESTION_MESSAGE);
+		String name = JOptionPane.showInputDialog(getParent(), "프로파일 이름: ", "프로파일 생성", JOptionPane.QUESTION_MESSAGE);
 		boolean nameValidation = validateNameForNewProfile(name);
 		OrganizerManager.getKeyboardHook().setHotkeysEnabled(areHotkeysEnabled);
 		if (nameValidation)
@@ -115,7 +115,7 @@ public class ProfileList extends JList<Profile> implements ListCellRenderer<Prof
 			}
 			catch (Exception e)
 			{
-				JOptionPane.showMessageDialog(getParent(), "Error occured when trying to create the profile!", "Error occured",
+				JOptionPane.showMessageDialog(getParent(), "프로파일 생성 중 에러가 발생했습니다!", "에러 발생",
 						JOptionPane.ERROR_MESSAGE);
 			}
 		}
@@ -152,14 +152,14 @@ public class ProfileList extends JList<Profile> implements ListCellRenderer<Prof
 			return false;
 		if (OrganizerManager.containsIllegals(name))
 		{
-			JOptionPane.showMessageDialog(getParent(), "Illegal characters (" + OrganizerManager.ILLEGAL_CHARACTERS + ") are not allowed!",
-					"Warning", JOptionPane.WARNING_MESSAGE);
+			JOptionPane.showMessageDialog(getParent(), "사용할 수 없는 문자열 (" + OrganizerManager.ILLEGAL_CHARACTERS + ") 은(는) 허용되지 않습니다!",
+					"경고", JOptionPane.WARNING_MESSAGE);
 			return false;
 		}
 		File newSaveDir = new File(game.getDirectory() + File.separator + name);
 		if (newSaveDir.exists())
 		{
-			JOptionPane.showMessageDialog(getParent(), "This profile already exists!", "Warning", JOptionPane.WARNING_MESSAGE);
+			JOptionPane.showMessageDialog(getParent(), "이 프로파일은 이미 존재합니다!", "주의", JOptionPane.WARNING_MESSAGE);
 			return false;
 		}
 		return true;
@@ -180,10 +180,10 @@ public class ProfileList extends JList<Profile> implements ListCellRenderer<Prof
 		OrganizerManager.getKeyboardHook().setHotkeysEnabled(false);
 		if (profiles.size() == 1)
 			confirm = JOptionPane.showConfirmDialog(getParent(),
-					"Do you really want to delete '" + profiles.get(0).getName() + "' and all of its contents?", "Delete",
+					"프로파일 '" + profiles.get(0).getName() + "' 와 내용물을 정말로 제거하시겠습니까?", "제거",
 					JOptionPane.YES_NO_OPTION);
 		else if (profiles.size() > 1)
-			confirm = JOptionPane.showConfirmDialog(getParent(), "Do you really want to delete all your selected profiles?", "Delete",
+			confirm = JOptionPane.showConfirmDialog(getParent(), "선택한 모든 프로파일을 제거하시겠습니까?", "제거",
 					JOptionPane.YES_NO_OPTION);
 		if (confirm == 0)
 			deleteProfiles(profiles);
@@ -220,7 +220,7 @@ public class ProfileList extends JList<Profile> implements ListCellRenderer<Prof
 			return;
 		boolean areHotkeysEnabled = OrganizerManager.getKeyboardHook().areHotkeysEnabled();
 		OrganizerManager.getKeyboardHook().setHotkeysEnabled(false);
-		String newProfileName = (String) JOptionPane.showInputDialog(getParent(), "Profile name: ", "Edit " + profile.getName(),
+		String newProfileName = (String) JOptionPane.showInputDialog(getParent(), "프로파일 이름: ", "수정 " + profile.getName(),
 				JOptionPane.QUESTION_MESSAGE, null, null, profile.getName());
 		boolean nameValidation = validateNewName(profile, newProfileName);
 		OrganizerManager.getKeyboardHook().setHotkeysEnabled(areHotkeysEnabled);
@@ -258,15 +258,15 @@ public class ProfileList extends JList<Profile> implements ListCellRenderer<Prof
 			return false;
 		if (OrganizerManager.containsIllegals(newName))
 		{
-			JOptionPane.showMessageDialog(getParent(), "Illegal characters (" + OrganizerManager.ILLEGAL_CHARACTERS + ") are not allowed!",
-					"Warning", JOptionPane.WARNING_MESSAGE);
+			JOptionPane.showMessageDialog(getParent(), "사용할 수 없는 문자열 (" + OrganizerManager.ILLEGAL_CHARACTERS + ") 은(는) 허용되지 않습니다!",
+					"경고", JOptionPane.WARNING_MESSAGE);
 			return false;
 		}
 		// if the name exists and the renaming is not a re-capitalization then don't allow renaming
 		File newSaveDir = new File(game.getDirectory() + File.separator + newName);
 		if (newSaveDir.exists() && !profile.getName().equalsIgnoreCase(newName))
 		{
-			JOptionPane.showMessageDialog(getParent(), "This name already exists!", "Warning", JOptionPane.WARNING_MESSAGE);
+			JOptionPane.showMessageDialog(getParent(), "같은 이름이 이미 존재합니다!", "주의", JOptionPane.WARNING_MESSAGE);
 			return false;
 		}
 		return true;

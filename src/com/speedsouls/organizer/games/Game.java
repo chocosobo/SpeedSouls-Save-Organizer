@@ -23,7 +23,8 @@ public enum Game
 	DARK_SOULS_REMASTERED("닼소 리마", "DSR", "DRAKS0005.sl2"),
 	DARK_SOULS_II("닼소 II", "DS2", "DARKSII0000.sl2"),
 	DARK_SOULS_II_SOTFS("스꼴라", "DS2SOTFS", "DS2SOFS0000.sl2"),
-	DARK_SOULS_III("닼소 III", "DS3", "DS30000.sl2");
+	DARK_SOULS_III("닼소 III", "DS3", "DS30000.sl2"),
+	SEKIRO("세키로","SKR","S0000.sl2");
 
 	private String caption;
 	private String abbr;

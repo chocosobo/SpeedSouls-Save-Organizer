@@ -99,7 +99,7 @@ public class AboutPanel extends JPanel
 
 	private JLabel createGitHubLink()
 	{
-		JLabel githubLabel = new JLabel("<html><body><a href=\"\">번역한 놈 깃헙 : 초코소보</a></body></html>");
+		JLabel githubLabel = new JLabel("<html><body><a href=\"\">번역 및 수정: 초코소보</a></body></html>");
 		githubLabel.setIcon(IconFontSwing.buildIcon(Elusive.GITHUB, 20));
 		githubLabel.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
 		githubLabel.setHorizontalAlignment(SwingConstants.RIGHT);

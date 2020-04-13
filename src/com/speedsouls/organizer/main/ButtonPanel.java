@@ -140,7 +140,7 @@ public class ButtonPanel extends JPanel
 	 */
 	private JButton createReplaceButton()
 	{
-		JButton replaceButton = new JButton("세이브 덮어쓰기");
+		JButton replaceButton = new JButton("목록에 덮어쓰기");
 		replaceButton.setIcon(IconFontSwing.buildIcon(Elusive.REFRESH, 15, new Color(255, 168, 0)));
 		replaceButton.addActionListener(event -> {
 			Save selectedSave = (Save) OrganizerManager.getSelectedEntry();

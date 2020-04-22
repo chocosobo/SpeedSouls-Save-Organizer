@@ -3,7 +3,13 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>SpeedSouls</groupId>
 	<artifactId>SaveOrganizer</artifactId>
-	<version>1.4.1-SNAPSHOT</version>
+	<version>2</version>
+	
+	<properties>
+		<project.build.sourceEncoding>utf-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>utf-8</project.reporting.outputEncoding>
+	</properties>
+
 
 	<dependencies>
 		<dependency>
@@ -92,10 +98,4 @@
 			</plugin>
 		</plugins>
 	</build>
-
-	<properties>
-		<project.build.sourceEncoding>utf-8</project.build.sourceEncoding>
-		<project.reporting.outputEncoding>utf-8</project.reporting.outputEncoding>
-	</properties>
-	
 </project>
